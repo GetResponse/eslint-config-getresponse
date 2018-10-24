@@ -15,6 +15,6 @@ This package contains all of our ESLint rules, including ECMAScript 6+ and React
    npx install-peerdeps --dev eslint-config-getresponse
    ```
 
-2. Add `"extends": "eslint-config-getresponse-base"` to your ESLint config.
+2. Add `"extends": "eslint-config-getresponse"` to your ESLint config.
 
 3. If you're using babel be sure to use [babel-eslint](https://github.com/babel/babel-eslint) as your parser.
