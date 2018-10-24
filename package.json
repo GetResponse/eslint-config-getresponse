@@ -1,0 +1,43 @@
+{
+  "name": "eslint-config-getresponse",
+  "version": "1.0.0",
+  "description": "GetResponse ESLint shareable config for React apps",
+  "keywords": [
+    "config",
+    "eslint",
+    "eslintconfig",
+    "getresponse",
+    "javascript",
+    "styleguide"
+  ],
+  "homepage": "https://github.com/getresponse/eslint-config-getresponse#readme",
+  "bugs": {
+    "url": "https://github.com/getresponse/eslint-config-getresponse/issues"
+  },
+  "license": "MIT",
+  "author": "Rafał Maciejewski (https://github.com/rafalmaciejewski)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getresponse/eslint-config-getresponse.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "eslint-config-getresponse-base": "1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
+  },
+  "peerDependencies": {
+    "eslint": "^4.8.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
+  }
+}
