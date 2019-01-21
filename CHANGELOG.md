@@ -1,3 +1,8 @@
+2.0.1 / 2019-01-21
+==================
+- Fixed legacy decorators support
+
+
 2.0.0 / 2019-01-21
 ==================
 - Updated ESLint from v4 to v5
