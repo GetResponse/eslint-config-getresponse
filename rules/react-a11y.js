@@ -10,6 +10,12 @@ module.exports = {
     },
     rules: {
 
+        'jsx-a11y/anchor-has-content': ['warn', {
+            components: ['Link'],
+        }],
+        'jsx-a11y/anchor-is-valid': ['off'],
+        'jsx-a11y/label-has-associated-control': ['off'],
+
         // Require ARIA roles to be valid and non-abstract
         // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md
         'jsx-a11y/aria-role': ['error', {ignoreNonDom: false}],
@@ -41,12 +47,7 @@ module.exports = {
         // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md
         'jsx-a11y/img-redundant-alt': 'error',
 
-        // require that JSX labels use "htmlFor"
-        // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
-        'jsx-a11y/label-has-for': ['error', {components: ['label']}],
-
         // require that mouseover/out come with focus/blur, for keyboard-only users
-        // TODO: evaluate
         // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/mouse-events-have-key-events.md
         'jsx-a11y/mouse-events-have-key-events': 'off',
 
