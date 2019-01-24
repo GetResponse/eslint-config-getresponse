@@ -66,7 +66,7 @@ module.exports = {
         'react/jsx-equals-spacing': ['warn', 'never'],
         'react/jsx-filename-extension': ['off'],
         'react/jsx-first-prop-new-line': ['off'],
-        'react/jsx-fragments': ['warn', 'syntax'],
+        'react/jsx-fragments': ['warn', 'element'],
         'react/jsx-handler-names': ['off'],
         'react/jsx-indent': ['warn', 4],
         'react/jsx-indent-props': ['off'],

@@ -1,3 +1,8 @@
+2.0.3 / 2019-01-21
+==================
+- Fixed `react/jsx-fragments` rule - changed mode from `syntax` to `element`
+
+
 2.0.2 / 2019-01-21
 ==================
 - Updated base config
