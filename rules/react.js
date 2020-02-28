@@ -133,7 +133,7 @@ module.exports = {
             'warn',
             {
                 closingSlash: 'never',
-                beforeSelfClosing: 'always',
+                beforeSelfClosing: 'allow',
                 afterOpening: 'never',
                 beforeClosing: 'never',
             },
