@@ -1,3 +1,10 @@
+## [3.1.3](https://github.com/getresponse/eslint-config-getresponse/compare/v3.1.2...v3.1.3) (2020-02-28)
+
+
+### Bug Fixes
+
+* **jest:** update lowercase-name rule ([cd2ac83](https://github.com/getresponse/eslint-config-getresponse/commit/cd2ac83f3bd8ca54a49b68d1eb322eb85bd2c550))
+
 ## [3.1.2](https://github.com/getresponse/eslint-config-getresponse/compare/v3.1.1...v3.1.2) (2020-02-28)
 
 
