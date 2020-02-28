@@ -1,3 +1,10 @@
+## [3.1.4](https://github.com/getresponse/eslint-config-getresponse/compare/v3.1.3...v3.1.4) (2020-02-28)
+
+
+### Bug Fixes
+
+* **jest:** disable prefer-called-with rule ([8315230](https://github.com/getresponse/eslint-config-getresponse/commit/83152305fac4117dc80d43840d4771a3e733f80f))
+
 ## [3.1.3](https://github.com/getresponse/eslint-config-getresponse/compare/v3.1.2...v3.1.3) (2020-02-28)
 
 
