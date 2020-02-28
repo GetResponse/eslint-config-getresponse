@@ -1,3 +1,10 @@
+## [3.1.5](https://github.com/getresponse/eslint-config-getresponse/compare/v3.1.4...v3.1.5) (2020-02-28)
+
+
+### Bug Fixes
+
+* **jest:** disable no-unused-modules for manual mocks ([14a0bb5](https://github.com/getresponse/eslint-config-getresponse/commit/14a0bb5cc0f9229ffefd9db8dbc7c7b433348949))
+
 ## [3.1.4](https://github.com/getresponse/eslint-config-getresponse/compare/v3.1.3...v3.1.4) (2020-02-28)
 
 
