@@ -54,5 +54,11 @@ module.exports = {
                 '@typescript-eslint/typedef': ['off'],
             },
         },
+        {
+            files: ['**/__mocks__/**/*'],
+            rules: {
+                'import/no-unused-modules': ['off'],
+            },
+        },
     ],
 };
