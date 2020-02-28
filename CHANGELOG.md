@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/getresponse/eslint-config-getresponse/compare/v3.0.0...v3.0.1) (2020-02-28)
+
+
+### Bug Fixes
+
+* remove useless files from published package ([9c283ac](https://github.com/getresponse/eslint-config-getresponse/commit/9c283acee241d6ff4d9db5e137f51e4ea8211637))
+
 # [3.0.0](https://github.com/getresponse/eslint-config-getresponse/compare/v2.1.0...v3.0.0) (2020-02-28)
 
 
