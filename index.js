@@ -3,7 +3,14 @@ module.exports = {
         'eslint-config-getresponse-base',
         './rules/react',
         './rules/react-a11y',
+        './rules/jest',
     ].map(require.resolve),
+    plugins: [
+        'jest',
+        'jsx-a11y',
+        'react',
+        'react-hooks',
+    ],
     env: {
         browser: true,
         commonjs: true,

@@ -1,8 +1,5 @@
+/* eslint-disable max-len */
 module.exports = {
-    plugins: [
-        'jsx-a11y',
-        'react',
-    ],
     rules: {
 
         'jsx-a11y/anchor-has-content': ['warn', {
@@ -97,7 +94,6 @@ module.exports = {
 
         // require onClick be accompanied by onKeyUp/onKeyDown/onKeyPress
         // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/click-events-have-key-events.md
-        // TODO: enable?
         'jsx-a11y/click-events-have-key-events': 'off',
 
         // Enforce that DOM elements without semantic behavior not have interaction handlers

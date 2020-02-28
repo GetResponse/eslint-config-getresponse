@@ -1,8 +1,4 @@
 module.exports = {
-    plugins: [
-        'react',
-        'react-hooks',
-    ],
     rules: {
         'react/boolean-prop-naming': ['off'],
         'react/button-has-type': ['warn'],
