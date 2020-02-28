@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/getresponse/eslint-config-getresponse/compare/v3.0.2...v3.0.3) (2020-02-28)
+
+
+### Bug Fixes
+
+* **react:** update jsx-tag-spacing rule ([7ffdafe](https://github.com/getresponse/eslint-config-getresponse/commit/7ffdafeba96b3781173a3ec9acb7f9aa1b2d58d1))
+
 ## [3.0.2](https://github.com/getresponse/eslint-config-getresponse/compare/v3.0.1...v3.0.2) (2020-02-28)
 
 
