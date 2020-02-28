@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/getresponse/eslint-config-getresponse/compare/v3.0.3...v3.1.0) (2020-02-28)
+
+
+### Features
+
+* add rules for jest ([f768468](https://github.com/getresponse/eslint-config-getresponse/commit/f76846879acbb875da0e68f71064ca2db126fe2f))
+
 ## [3.0.3](https://github.com/getresponse/eslint-config-getresponse/compare/v3.0.2...v3.0.3) (2020-02-28)
 
 
