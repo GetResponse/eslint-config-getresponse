@@ -5,7 +5,9 @@ module.exports = {
             withinDescribe: 'it',
         }],
         'jest/expect-expect': ['error'],
-        'jest/lowercase-name': ['warn'],
+        'jest/lowercase-name': ['warn', {
+            ignore: ['describe'],
+        }],
         'jest/no-alias-methods': ['off'],
         'jest/no-commented-out-tests': ['error'],
         'jest/no-disabled-tests': ['warn'],
