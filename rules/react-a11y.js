@@ -3,11 +3,6 @@ module.exports = {
         'jsx-a11y',
         'react',
     ],
-    parserOptions: {
-        ecmaFeatures: {
-            jsx: true,
-        },
-    },
     rules: {
 
         'jsx-a11y/anchor-has-content': ['warn', {
@@ -15,6 +10,7 @@ module.exports = {
         }],
         'jsx-a11y/anchor-is-valid': ['off'],
         'jsx-a11y/label-has-associated-control': ['off'],
+        'jsx-a11y/control-has-associated-label': ['warn'],
 
         // Require ARIA roles to be valid and non-abstract
         // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md

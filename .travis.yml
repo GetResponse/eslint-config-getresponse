@@ -3,28 +3,19 @@ dist: trusty
 
 language: node_js
 node_js:
-- "10"
-- "9"
-
-cache:
-  directories:
-  - "node_modules"
+  - 12
 
 jobs:
   include:
-  - stage: test
-    name: test
-    script: npm test
-  - stage: deploy
-    name: npm
-    deploy:
-      provider: npm
-      email: $NPM_EMAIL
-      api_key: $NPM_TOKEN
-      tag: latest
-      on:
-        tags: true
+    - stage: test
+      script: npm test
+    - stage: deploy
+      deploy:
+        provider: script
+        skip_cleanup: true
+        on:
+          branch: master
+        script: npm run release
 stages:
-- test
-- name: deploy
-  if: tag IS present
+  - test
+  - deploy

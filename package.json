@@ -14,31 +14,52 @@
   "bugs": {
     "url": "https://github.com/getresponse/eslint-config-getresponse/issues"
   },
-  "license": "MIT",
-  "author": "Rafał Maciejewski (https://github.com/rafalmaciejewski)",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/getresponse/eslint-config-getresponse.git"
   },
+  "license": "MIT",
+  "author": "Rafał Maciejewski (https://github.com/rafalmaciejewski)",
+  "main": "index.js",
   "scripts": {
     "lint": "eslint .",
+    "release": "semantic-release",
+    "rules": "eslint-find-rules -u ./index.js",
     "test": "npm run lint"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
-    "eslint-config-getresponse-base": "2.1.0"
+    "eslint-config-getresponse-base": "3.1.0"
   },
   "devDependencies": {
-    "eslint": "^5.12.1",
+    "@semantic-release/changelog": "^5.0.0",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.0.4",
+    "@semantic-release/npm": "^7.0.3",
+    "@semantic-release/release-notes-generator": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "cz-conventional-changelog": "^3.1.0",
+    "eslint": "^6.8.0",
     "eslint-find-rules": "^3.3.1",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.12.4"
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "semantic-release": "^17.0.4",
+    "typescript": "^3.8.2"
   },
   "peerDependencies": {
-    "eslint": "^5.12.1",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.12.4"
+    "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "typescript": "^3.8.2"
   }
 }

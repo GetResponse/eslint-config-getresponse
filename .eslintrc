@@ -1,6 +1,6 @@
 {
   "extends": "./index.js",
   "rules": {
-    "no-magic-numbers": "off"
+    "@typescript-eslint/no-magic-numbers": "off"
   }
 }

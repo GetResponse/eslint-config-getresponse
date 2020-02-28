@@ -1,12 +1,8 @@
 module.exports = {
     plugins: [
         'react',
+        'react-hooks',
     ],
-    parserOptions: {
-        ecmaFeatures: {
-            jsx: true,
-        },
-    },
     rules: {
         'react/boolean-prop-naming': ['off'],
         'react/button-has-type': ['warn'],
@@ -18,7 +14,13 @@ module.exports = {
         'react/forbid-elements': ['off'],
         'react/forbid-foreign-prop-types': ['warn'],
         'react/forbid-prop-types': ['off'],
+        'react/function-component-definition': ['warn'],
+        'react/jsx-curly-newline': ['warn'],
+        'react/jsx-no-script-url': ['error'],
+        'react/jsx-no-useless-fragment': ['warn'],
+        'react/jsx-props-no-spreading': ['off'],
         'react/no-access-state-in-setstate': ['error'],
+        'react/no-adjacent-inline-elements': ['off'],
         'react/no-array-index-key': ['off'],
         'react/no-children-prop': ['error'],
         'react/no-danger': ['error'],
@@ -43,6 +45,7 @@ module.exports = {
         'react/no-unused-state': ['warn'],
         'react/no-will-update-set-state': ['error'],
         'react/prefer-es6-class': ['warn'],
+        'react/prefer-read-only-props': ['off'],
         'react/prefer-stateless-function': ['off'],
         'react/prop-types': ['warn', {ignore: ['children', 'params']}],
         'react/react-in-jsx-scope': ['error'],
@@ -52,6 +55,7 @@ module.exports = {
         'react/self-closing-comp': ['warn'],
         'react/sort-comp': ['warn'],
         'react/sort-prop-types': ['off'],
+        'react/state-in-constructor': ['off'],
         'react/style-prop-object': ['off'],
         'react/void-dom-elements-no-children': ['warn'],
         'react/jsx-boolean-value': ['error', 'always'],
@@ -92,5 +96,8 @@ module.exports = {
         'react/jsx-uses-react': ['error'],
         'react/jsx-uses-vars': ['error'],
         'react/jsx-wrap-multilines': ['warn'],
+        'react/static-property-placement': ['warn'],
+        'react-hooks/rules-of-hooks': ['error'],
+        'react-hooks/exhaustive-deps': ['warn'],
     },
 };
