@@ -28,7 +28,7 @@ module.exports = {
         'jest/no-test-return-statement': ['error'],
         'jest/no-truthy-falsy': ['warn'],
         'jest/no-try-expect': ['error'],
-        'jest/prefer-called-with': ['warn'],
+        'jest/prefer-called-with': ['off'],
         'jest/prefer-expect-assertions': ['off'],
         'jest/prefer-hooks-on-top': ['warn'],
         'jest/prefer-inline-snapshots': ['off'],
