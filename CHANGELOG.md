@@ -1,3 +1,10 @@
+## [3.1.14](https://github.com/getresponse/eslint-config-getresponse/compare/v3.1.13...v3.1.14) (2020-03-01)
+
+
+### Bug Fixes
+
+* **react:** update no-multi-comp rule to ignore stateless components ([52fa645](https://github.com/getresponse/eslint-config-getresponse/commit/52fa645ef90384c03db42ddce2a8b56685b1b55b))
+
 ## [3.1.13](https://github.com/getresponse/eslint-config-getresponse/compare/v3.1.12...v3.1.13) (2020-03-01)
 
 
