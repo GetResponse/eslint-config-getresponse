@@ -52,6 +52,8 @@ module.exports = {
             rules: {
                 '@typescript-eslint/explicit-function-return-type': ['off'],
                 '@typescript-eslint/typedef': ['off'],
+                '@typescript-eslint/no-magic-numbers': ['off'],
+                '@typescript-eslint/no-empty-function': ['off'],
             },
         },
         {
