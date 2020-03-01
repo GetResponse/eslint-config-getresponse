@@ -1,3 +1,10 @@
+## [3.1.13](https://github.com/getresponse/eslint-config-getresponse/compare/v3.1.12...v3.1.13) (2020-03-01)
+
+
+### Bug Fixes
+
+* update eslint-config-getresponse-base to v3.1.13, drop requirement for eslint-plugin-import ([f0ee46a](https://github.com/getresponse/eslint-config-getresponse/commit/f0ee46a7de88ecd043d03696224fdc1fb42a8e80))
+
 ## [3.1.12](https://github.com/getresponse/eslint-config-getresponse/compare/v3.1.11...v3.1.12) (2020-03-01)
 
 
