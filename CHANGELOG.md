@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/getresponse/eslint-config-getresponse/compare/v3.1.18...v4.0.0) (2020-03-03)
+
+
+### Bug Fixes
+
+* move jest rules to base config ([f50797c](https://github.com/getresponse/eslint-config-getresponse/commit/f50797c12a1988c12721b8775bfbf9b5f543f947))
+
+
+### BREAKING CHANGES
+
+* updated peer dependencies
+
 ## [3.1.18](https://github.com/getresponse/eslint-config-getresponse/compare/v3.1.17...v3.1.18) (2020-03-03)
 
 
