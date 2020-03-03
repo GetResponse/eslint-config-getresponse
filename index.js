@@ -3,10 +3,8 @@ module.exports = {
         'eslint-config-getresponse-base',
         './rules/react',
         './rules/react-a11y',
-        './rules/jest',
     ].map(require.resolve),
     plugins: [
-        'jest',
         'jsx-a11y',
         'react',
         'react-hooks',
@@ -19,7 +17,7 @@ module.exports = {
         node: true,
     },
     parserOptions: {
-        ecmaVersion: 11,
+        ecmaVersion: 2020,
         sourceType: 'module',
         ecmaFeatures: {
             jsx: true,
@@ -35,7 +33,7 @@ module.exports = {
             files: ['**/*.ts?(x)'],
             parser: '@typescript-eslint/parser',
             parserOptions: {
-                ecmaVersion: 2018,
+                ecmaVersion: 2020,
                 sourceType: 'module',
                 ecmaFeatures: {
                     jsx: true,
