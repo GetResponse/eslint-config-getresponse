@@ -1,3 +1,10 @@
+## [4.0.2](https://github.com/getresponse/eslint-config-getresponse/compare/v4.0.1...v4.0.2) (2020-03-04)
+
+
+### Bug Fixes
+
+* **react:** disable function-component-definition rule ([6df923d](https://github.com/getresponse/eslint-config-getresponse/commit/6df923dcee4f2de09705490ba49a29a117273c11))
+
 ## [4.0.1](https://github.com/getresponse/eslint-config-getresponse/compare/v4.0.0...v4.0.1) (2020-03-03)
 
 
