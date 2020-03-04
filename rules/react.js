@@ -10,7 +10,7 @@ module.exports = {
         'react/forbid-elements': ['off'],
         'react/forbid-foreign-prop-types': ['warn'],
         'react/forbid-prop-types': ['off'],
-        'react/function-component-definition': ['warn'],
+        'react/function-component-definition': ['off'],
         'react/jsx-curly-newline': ['warn'],
         'react/jsx-no-script-url': ['error'],
         'react/jsx-no-useless-fragment': ['warn'],
