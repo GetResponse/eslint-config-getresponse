@@ -1,3 +1,10 @@
+## [4.0.3](https://github.com/getresponse/eslint-config-getresponse/compare/v4.0.2...v4.0.3) (2020-03-06)
+
+
+### Bug Fixes
+
+* update eslint-config-getresponse-base to v4.0.3 ([ebb590a](https://github.com/getresponse/eslint-config-getresponse/commit/ebb590a36106c901c9c3e2ab7b4d49a5a49e2216))
+
 ## [4.0.2](https://github.com/getresponse/eslint-config-getresponse/compare/v4.0.1...v4.0.2) (2020-03-04)
 
 
