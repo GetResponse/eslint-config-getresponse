@@ -30,7 +30,7 @@ module.exports = {
     },
     overrides: [
         {
-            files: ['**/*.ts?(x)'],
+            files: ['**/*.ts', '**/*.tsx'],
             parser: '@typescript-eslint/parser',
             parserOptions: {
                 ecmaVersion: 2020,
