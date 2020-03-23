@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/getresponse/eslint-config-getresponse/compare/v4.0.6...v5.0.0) (2020-03-23)
+
+
+### Features
+
+* update eslint-config-getresponse-base to v5.0.0 ([92b59a8](https://github.com/getresponse/eslint-config-getresponse/commit/92b59a8f4dab087d2c229dba98618548de71dbef))
+
+
+### BREAKING CHANGES
+
+* there is no longer need for tsconfig.eslint.json
+
 ## [4.0.6](https://github.com/getresponse/eslint-config-getresponse/compare/v4.0.5...v4.0.6) (2020-03-19)
 
 
