@@ -33,7 +33,7 @@
     }
   },
   "dependencies": {
-    "eslint-config-getresponse-base": "5.0.3"
+    "eslint-config-getresponse-base": "5.0.4"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
