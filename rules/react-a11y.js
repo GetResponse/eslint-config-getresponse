@@ -172,5 +172,6 @@ module.exports = {
             tags: [],
             roles: ['tabpanel'],
         }],
+        'jsx-a11y/autocomplete-valid': ['error'],
     },
 };
