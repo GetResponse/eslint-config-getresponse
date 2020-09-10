@@ -38,7 +38,12 @@ module.exports = {
                 ecmaFeatures: {
                     jsx: true,
                 },
+                lib: ['ESNext', 'DOM', 'DOM.Iterable', 'ES6', 'ES7', 'WebWorker', 'ScriptHost'],
+                warnOnUnsupportedTypeScriptVersion: false,
             },
         },
     ],
+    globals: {
+        JSX: 'readonly',
+    },
 };
