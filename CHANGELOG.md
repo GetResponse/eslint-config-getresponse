@@ -1,3 +1,10 @@
+## [5.1.2](https://github.com/getresponse/eslint-config-getresponse/compare/v5.1.1...v5.1.2) (2020-09-10)
+
+
+### Bug Fixes
+
+* **typescript:** update parser options ([8ae9022](https://github.com/getresponse/eslint-config-getresponse/commit/8ae90223316670729df810d0a19ec56562c69e53))
+
 ## [5.1.1](https://github.com/getresponse/eslint-config-getresponse/compare/v5.1.0...v5.1.1) (2020-09-08)
 
 
