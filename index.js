@@ -42,6 +42,23 @@ module.exports = {
                 warnOnUnsupportedTypeScriptVersion: false,
             },
         },
+        {
+            files: [
+                '*.test.ts',
+                '*.test.tsx',
+                '**/__mocks__/**/*.ts',
+                '**/__mocks__/**/*.tsx',
+                '*.spec.ts',
+                '*.spec.tsx',
+                '*.test-e2e.ts',
+                '*.test-e2e.tsx',
+                '*.spec-e2e.ts',
+                '*.spec-e2e.tsx',
+            ],
+            rules: {
+                'react/jsx-no-bind': ['off'],
+            },
+        },
     ],
     globals: {
         JSX: 'readonly',
