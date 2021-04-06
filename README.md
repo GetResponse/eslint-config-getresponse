@@ -1,7 +1,7 @@
 # eslint-config-getresponse
 
 [![npm version](https://badge.fury.io/js/eslint-config-getresponse.svg)](https://badge.fury.io/js/eslint-config-getresponse)
-[![Build Status](https://travis-ci.com/GetResponse/eslint-config-getresponse.svg?branch=master)](https://travis-ci.com/GetResponse/eslint-config-getresponse)
+[![Build Status](https://github.com/GetResponse/eslint-config-getresponse/actions/workflows/main.yml/badge.svg)](https://github.com/GetResponse/eslint-config-getresponse/actions)
 [![Dependencies](https://img.shields.io/david/GetResponse/eslint-config-getresponse.svg)](https://david-dm.org/GetResponse/eslint-config-getresponse)
 [![peerDependencies Status](https://david-dm.org/GetResponse/eslint-config-GetResponse/peer-status.svg)](https://david-dm.org/GetResponse/eslint-config-getresponse?type=peer)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://badges.mit-license.org)
