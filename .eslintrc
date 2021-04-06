@@ -1,5 +1,5 @@
 {
-  "extends": "./index.js",
+  "extends": ["./index.js", "prettier"],
   "rules": {
     "@typescript-eslint/no-magic-numbers": "off"
   }
