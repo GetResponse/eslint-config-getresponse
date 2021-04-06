@@ -116,7 +116,13 @@ module.exports = {
     'react/jsx-max-depth': ['warn', { max: 7 }],
     'react/jsx-one-expression-per-line': ['off'],
     'react/jsx-max-props-per-line': ['warn', { maximum: 1, when: 'multiline' }],
-    'react/jsx-no-bind': ['warn', { ignoreRefs: true }],
+    'react/jsx-no-bind': [
+      'warn',
+      {
+        ignoreRefs: true,
+        ignoreDOMComponents: true,
+      },
+    ],
     'react/jsx-no-comment-textnodes': ['error'],
     'react/jsx-no-duplicate-props': ['error'],
     'react/jsx-no-literals': ['off'],
