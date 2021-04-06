@@ -1,3 +1,15 @@
+# [5.2.0](https://github.com/getresponse/eslint-config-getresponse/compare/v5.1.6...v5.2.0) (2021-04-06)
+
+
+### Bug Fixes
+
+* **jsx-no-bind:** turn on ignoreDOMComponents config option ([46ba6ba](https://github.com/getresponse/eslint-config-getresponse/commit/46ba6ba4c4d2dcbfbd79073e0f88aea4130863d7))
+
+
+### Features
+
+* update base config ([0347df9](https://github.com/getresponse/eslint-config-getresponse/commit/0347df95b227cf87d893e06ede6c9240bf5fd9ca))
+
 ## [5.1.6](https://github.com/getresponse/eslint-config-getresponse/compare/v5.1.5...v5.1.6) (2021-04-06)
 
 
