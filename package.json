@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-getresponse",
-  "version": "5.2.2",
+  "version": "5.2.3",
   "description": "GetResponse ESLint shareable config for React apps",
   "keywords": [
     "config",
