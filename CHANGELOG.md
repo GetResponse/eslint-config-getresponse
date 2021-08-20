@@ -1,3 +1,15 @@
+# [5.3.0](https://github.com/getresponse/eslint-config-getresponse/compare/v5.2.3...v5.3.0) (2021-08-20)
+
+
+### Bug Fixes
+
+* disable react/prop-types rule for typescript files ([4899138](https://github.com/getresponse/eslint-config-getresponse/commit/489913849aa2ece308fbc3ee55e95759c107cd18))
+
+
+### Features
+
+* update base config ([7fdc654](https://github.com/getresponse/eslint-config-getresponse/commit/7fdc65444e6dc12e46b76c68dfa7a5d8dd6ddc71))
+
 ## [5.2.3](https://github.com/getresponse/eslint-config-getresponse/compare/v5.2.2...v5.2.3) (2021-04-16)
 
 
