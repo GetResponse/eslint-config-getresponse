@@ -1,3 +1,10 @@
+## [5.4.1](https://github.com/getresponse/eslint-config-getresponse/compare/v5.4.0...v5.4.1) (2021-09-08)
+
+
+### Bug Fixes
+
+* disable react/no-unused-prop-types for typescript files ([60ffff5](https://github.com/getresponse/eslint-config-getresponse/commit/60ffff568569b9e3a77051bcddb2269164ad08ec))
+
 # [5.4.0](https://github.com/getresponse/eslint-config-getresponse/compare/v5.3.0...v5.4.0) (2021-08-24)
 
 
