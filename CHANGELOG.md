@@ -1,3 +1,10 @@
+## [5.4.5](https://github.com/getresponse/eslint-config-getresponse/compare/v5.4.4...v5.4.5) (2021-10-11)
+
+
+### Bug Fixes
+
+* trigger release for missing 5.4.4 version caused by npm incident ([901ca47](https://github.com/getresponse/eslint-config-getresponse/commit/901ca478cf339ec9fa2590f6f5ce6bc8a4dee92d))
+
 ## [5.4.4](https://github.com/getresponse/eslint-config-getresponse/compare/v5.4.3...v5.4.4) (2021-10-11)
 
 
