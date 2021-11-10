@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/getresponse/eslint-config-getresponse/compare/v6.0.0...v6.0.1) (2021-11-10)
+
+
+### Bug Fixes
+
+* update base config ([d20f76e](https://github.com/getresponse/eslint-config-getresponse/commit/d20f76e74bc0a5a7e53f2599c629ec335e10589c))
+
 # [6.0.0](https://github.com/getresponse/eslint-config-getresponse/compare/v5.4.5...v6.0.0) (2021-10-12)
 
 
