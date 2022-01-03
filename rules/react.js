@@ -146,7 +146,7 @@ module.exports = {
     'react/jsx-wrap-multilines': ['warn'],
     'react/static-property-placement': ['warn'],
     'react-hooks/rules-of-hooks': ['error'],
-    'react-hooks/exhaustive-deps': ['warn'],
+    'react-hooks/exhaustive-deps': ['off'],
   },
   overrides: [
     {
