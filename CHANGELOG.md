@@ -1,3 +1,11 @@
+## [6.0.2](https://github.com/getresponse/eslint-config-getresponse/compare/v6.0.1...v6.0.2) (2022-01-03)
+
+
+### Bug Fixes
+
+* **react:** disable react-hooks/exhaustive-deps rule ([8ad6406](https://github.com/getresponse/eslint-config-getresponse/commit/8ad640694f73c7ad8a9fcd2897b0c29d81f3f1b1))
+* update package dependencies ([d5b5a0b](https://github.com/getresponse/eslint-config-getresponse/commit/d5b5a0be25b45ec1a763126c5ef21f72cdd4a498))
+
 ## [6.0.1](https://github.com/getresponse/eslint-config-getresponse/compare/v6.0.0...v6.0.1) (2021-11-10)
 
 
