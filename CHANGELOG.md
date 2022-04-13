@@ -1,3 +1,10 @@
+## [6.0.3](https://github.com/getresponse/eslint-config-getresponse/compare/v6.0.2...v6.0.3) (2022-04-13)
+
+
+### Bug Fixes
+
+* update base config package, bump up dev depedencies ([7a8fae8](https://github.com/getresponse/eslint-config-getresponse/commit/7a8fae863cb54b4779585f14cb1072d0ca1b1ced))
+
 ## [6.0.2](https://github.com/getresponse/eslint-config-getresponse/compare/v6.0.1...v6.0.2) (2022-01-03)
 
 
