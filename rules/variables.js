@@ -4,7 +4,7 @@ module.exports = {
         'no-delete-var': 'off',
         'no-label-var': 'off',
         'no-restricted-globals': 'off',
-        'no-shadow': 'error',
+        'no-shadow': 'off',
         'no-shadow-restricted-names': 'off',
         'no-undef': 'warn',
         'no-undef-init': 'off',

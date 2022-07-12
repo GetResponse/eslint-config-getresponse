@@ -27,12 +27,24 @@ module.exports = {
         'no-this-before-super': 'error',
         'no-useless-computed-key': 'off',
         'no-useless-constructor': 'off',
-        'no-useless-rename': 'off',
+        'no-useless-rename': 'warn',
         'no-var': 'off',
-        'object-shorthand': 'off',
+        'object-shorthand': ['warn', 'always', {
+            avoidQuotes: true,
+            ignoreConstructors: true,
+            avoidExplicitReturnArrows: true,
+        }],
         'prefer-arrow-callback': 'warn',
         'prefer-const': 'warn',
-        'prefer-destructuring': ['warn', { array: false, object: true }],
+        'prefer-destructuring': [
+            'warn',
+            {
+                VariableDeclarator: {
+                    array: false,
+                    object: true,
+                },
+            },
+        ],
         'prefer-numeric-literals': 'off',
         'prefer-rest-params': 'warn',
         'prefer-spread': 'warn',
