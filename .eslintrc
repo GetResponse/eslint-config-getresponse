@@ -1,6 +1,5 @@
 {
-  "extends": ["./index.js", "prettier"],
-  "rules": {
-    "@typescript-eslint/no-magic-numbers": "off"
-  }
+  "extends": [
+    "./index.cjs"
+  ]
 }
