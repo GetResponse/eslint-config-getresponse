@@ -1,5 +1,6 @@
 require('@rushstack/eslint-patch/modern-module-resolution');
 const {buildDynamicConfig} = require('./dynamic-config/buildDynamicConfig.cjs');
+const {lookupFile} = require('./dynamic-config/services/lookupFile.cjs');
 
 const dynamicConfig = buildDynamicConfig();
 
@@ -48,6 +49,7 @@ module.exports = {
                 },
                 lib: ['ESNext', 'DOM', 'DOM.Iterable', 'ES6', 'ES7', 'WebWorker', 'ScriptHost'],
                 warnOnUnsupportedTypeScriptVersion: false,
+                project: lookupFile('tsconfig.eslint.json', 'tsconfig.json'),
             },
         },
         {
