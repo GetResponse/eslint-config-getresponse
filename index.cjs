@@ -64,7 +64,7 @@ module.exports = {
                 '*.spec-e2e.tsx',
             ],
             rules: {
-                'react/jsx-no-bind': ['off'],
+                'react/jsx-no-bind': 'off',
             },
         },
     ],
