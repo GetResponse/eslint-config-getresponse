@@ -55,5 +55,6 @@ module.exports = {
         'symbol-description': 'off',
         'template-curly-spacing': 'warn',
         'yield-star-spacing': 'off',
+        'prefer-object-has-own': 'warn',
     },
 };

@@ -48,5 +48,7 @@ module.exports = {
         'require-unicode-regexp': 'off',
         'use-isnan': 'error',
         'valid-typeof': 'error',
+        'no-unused-private-class-members': 'warn',
+        'no-constant-binary-expression': 'error',
     },
 };
