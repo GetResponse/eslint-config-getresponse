@@ -93,7 +93,9 @@ module.exports = {
                 'no-redeclare': 'off',
                 '@typescript-eslint/no-redeclare': 'error',
                 'no-shadow': 'off',
-                '@typescript-eslint/no-shadow': 'off',
+                '@typescript-eslint/no-shadow': ['warn', {
+                    ignoreOnInitialization: true,
+                }],
                 '@typescript-eslint/array-type': [
                     'warn',
                     {

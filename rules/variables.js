@@ -4,8 +4,10 @@ module.exports = {
         'no-delete-var': 'off',
         'no-label-var': 'off',
         'no-restricted-globals': 'off',
-        'no-shadow': 'off',
-        'no-shadow-restricted-names': 'off',
+        'no-shadow': ['warn', {
+            ignoreOnInitialization: true,
+        }],
+        'no-shadow-restricted-names': 'error',
         'no-undef': 'warn',
         'no-undef-init': 'off',
         'no-undefined': 'off',
