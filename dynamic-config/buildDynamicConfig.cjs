@@ -1,7 +1,13 @@
 const semver = require('semver');
 const {PackageJson} = require('./files.cjs');
 
+let cachedConfig = null;
+
 module.exports.buildDynamicConfig = () => {
+    if (cachedConfig) {
+        return cachedConfig;
+    }
+
     function getDep(name) {
         for (const type of ['dependencies', 'devDependencies', 'peerDependencies']) {
             const requestedVersion = PackageJson[type]?.[name];
@@ -16,7 +22,7 @@ module.exports.buildDynamicConfig = () => {
         return null;
     }
 
-    return {
+    return cachedConfig = {
         react: getDep('react'),
         typescript: getDep('typescript'),
         jest: getDep('jest'),
