@@ -1,4 +1,6 @@
-module.exports = {
+const { buildDynamicConfig } = require('../dynamic-config/buildDynamicConfig.cjs');
+
+const eslintConfig = {
     overrides: [
         {
             files: ['**/*.ts', '**/*.tsx'],
@@ -171,3 +173,10 @@ module.exports = {
         },
     ],
 };
+
+if (buildDynamicConfig().shouldIncludeAll) {
+    eslintConfig.plugins = eslintConfig.overrides[0].plugins;
+    eslintConfig.rules = eslintConfig.overrides[0].rules;
+}
+
+module.exports = eslintConfig;

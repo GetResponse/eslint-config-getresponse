@@ -62,7 +62,7 @@ module.exports = {
             ignorePureComponents: true,
         }],
         'react/prop-types': ['warn', { ignore: ['children', 'params'] }],
-        'react/react-in-jsx-scope': semver.gte(config.react, '17.0.0') ? 'off' : 'error',
+        'react/react-in-jsx-scope': config.react && semver.gte(config.react, '17.0.0') ? 'off' : 'error',
         'react/require-default-props': 'off',
         'react/require-optimization': 'off',
         'react/require-render-return': 'error',

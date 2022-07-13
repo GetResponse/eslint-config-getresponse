@@ -27,5 +27,6 @@ module.exports.buildDynamicConfig = () => {
         typescript: getDep('typescript'),
         jest: getDep('jest'),
         esm: PackageJson.type === 'module',
+        shouldIncludeAll: process.env.DOCS_MODE === '1',
     };
 };

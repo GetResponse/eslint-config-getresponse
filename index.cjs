@@ -11,9 +11,9 @@ module.exports = {
         './rules/node',
         './rules/style',
         './rules/variables',
-        dynamicConfig.jest ? './rules/jest' : null,
-        dynamicConfig.typescript ? './rules/typescript' : null,
-        dynamicConfig.react ? './rules/react' : null,
+        dynamicConfig.jest || dynamicConfig.shouldIncludeAll ? './rules/jest' : null,
+        dynamicConfig.typescript || dynamicConfig.shouldIncludeAll ? './rules/typescript' : null,
+        dynamicConfig.react || dynamicConfig.shouldIncludeAll ? './rules/react' : null,
     ]
         .filter(Boolean)
         .map(f => require.resolve(f)),

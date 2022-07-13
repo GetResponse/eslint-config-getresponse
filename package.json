@@ -24,13 +24,17 @@
   "files": [
     "index.cjs",
     "mixins",
-    "rules"
+    "rules",
+    "public"
   ],
   "scripts": {
+    "build": "npm run build:docs",
+    "build:docs": "cross-env DOCS_MODE=1 node scripts/buildDocs.mjs",
     "lint": "eslint .",
     "release": "semantic-release",
     "rules": "eslint-find-rules -u ./index.cjs",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "prepublishOnly": "npm run build"
   },
   "config": {
     "commitizen": {
@@ -45,13 +49,13 @@
     "@semantic-release/npm": "9.0.1",
     "@semantic-release/release-notes-generator": "10.0.3",
     "@types/semver": "7.3.10",
+    "cross-env": "7.0.3",
     "cz-conventional-changelog": "^3.0.1",
     "eslint": "^8.19.0",
     "eslint-find-rules": "4.1.0",
+    "node-fetch": "3.2.8",
+    "pug": "3.0.2",
     "semantic-release": "^19.0.3"
-  },
-  "peerDependencies": {
-    "eslint": "^7.0.0 || ^8.0.0"
   },
   "dependencies": {
     "@rushstack/eslint-patch": "1.1.4",
@@ -61,5 +65,8 @@
     "eslint-plugin-react": "7.30.1",
     "eslint-plugin-react-hooks": "4.6.0",
     "semver": "7.3.7"
+  },
+  "peerDependencies": {
+    "eslint": "^7.0.0 || ^8.0.0"
   }
 }
