@@ -169,6 +169,13 @@ module.exports = {
         'react/static-property-placement': 'warn',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
+        'react/prefer-exact-props': 'off',
+        'react/no-unstable-nested-components': 'error',
+        'react/no-namespace': 'error',
+        'react/no-arrow-function-lifecycle': 'warn',
+        'react/jsx-no-leaked-render': 'error',
+        'react/jsx-no-constructed-context-values': 'error',
+        'react/iframe-missing-sandbox': 'error',
     },
     overrides: [
         {
