@@ -29,7 +29,7 @@
   "scripts": {
     "lint": "eslint .",
     "release": "semantic-release",
-    "rules": "eslint-find-rules -u ./index.js",
+    "rules": "eslint-find-rules -u ./index.cjs",
     "test": "npm run lint"
   },
   "config": {
