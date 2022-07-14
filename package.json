@@ -1,7 +1,7 @@
 {
-  "name": "eslint-config-getresponse",
+  "name": "@getresponse/eslint-config",
   "version": "6.0.3",
-  "description": "GetResponse ESLint shareable config for React apps",
+  "description": "GetResponse ESLint shareable config",
   "keywords": [
     "config",
     "eslint",
@@ -19,49 +19,55 @@
     "url": "git+https://github.com/getresponse/eslint-config-getresponse.git"
   },
   "license": "MIT",
-  "author": "Rafał Maciejewski (https://github.com/rafalmaciejewski)",
-  "main": "index.js",
+  "author": "GetResponse (https://github.com/GetResponse)",
+  "main": "index.cjs",
+  "files": [
+    "index.cjs",
+    "mixins",
+    "public",
+    "src"
+  ],
   "scripts": {
+    "build": "npm run build:docs",
+    "build:docs": "cross-env DOCS_MODE=1 node scripts/buildDocs.mjs",
     "lint": "eslint .",
     "release": "semantic-release",
-    "rules": "eslint-find-rules -u ./index.js",
-    "test": "npm run lint"
+    "rules": "eslint-find-rules -u ./index.cjs",
+    "test": "npm run lint",
+    "prepublishOnly": "npm run build"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {
-    "eslint-config-getresponse-base": "6.0.3"
-  },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/commit-analyzer": "9.0.2",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "8.0.4",
+    "@semantic-release/github": "8.0.5",
     "@semantic-release/npm": "9.0.1",
     "@semantic-release/release-notes-generator": "10.0.3",
-    "@typescript-eslint/eslint-plugin": "5.19.0",
+    "@types/semver": "7.3.10",
+    "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.0.1",
-    "eslint": "8.13.0",
-    "eslint-config-prettier": "8.5.0",
+    "eslint": "8.19.0",
     "eslint-find-rules": "4.1.0",
-    "eslint-plugin-jest": "26.1.4",
-    "eslint-plugin-jsx-a11y": "6.5.1",
-    "eslint-plugin-react": "7.29.4",
-    "eslint-plugin-react-hooks": "4.4.0",
-    "prettier": "2.6.2",
-    "semantic-release": "19.0.2",
-    "typescript": "4.6.3"
+    "node-fetch": "3.2.8",
+    "pug": "3.0.2",
+    "semantic-release": "19.0.3"
+  },
+  "dependencies": {
+    "@rushstack/eslint-patch": "1.1.4",
+    "@typescript-eslint/eslint-plugin": "5.30.6",
+    "eslint-plugin-jest": "26.5.3",
+    "eslint-plugin-jsx-a11y": "6.6.0",
+    "eslint-plugin-react": "7.30.1",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "get-tsconfig": "4.1.0",
+    "semver": "7.3.7"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "eslint": "^8.0.0",
-    "eslint-plugin-jest": "^26.0.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "typescript": "^4.2.4"
+    "eslint": "^8.10.0"
   }
 }
