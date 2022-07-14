@@ -1,5 +1,7 @@
 const { buildDynamicConfig } = require('../dynamic-config/buildDynamicConfig.cjs');
 
+const config = buildDynamicConfig();
+
 const eslintConfig = {
     overrides: [
         {
@@ -165,7 +167,15 @@ const eslintConfig = {
                 '@typescript-eslint/return-await': ['error', 'in-try-catch'],
                 '@typescript-eslint/triple-slash-reference': 'error',
                 '@typescript-eslint/type-annotation-spacing': 'warn',
-                '@typescript-eslint/typedef': 'off',
+                '@typescript-eslint/typedef': config.typescript?.config.noImplicitAny ? 'off' : ['warn', {
+                    arrayDestructuring: false,
+                    arrowParameter: false,
+                    memberVariableDeclaration: false,
+                    objectDestructuring: false,
+                    parameter: true,
+                    propertyDeclaration: true,
+                    variableDeclaration: false,
+                }],
                 '@typescript-eslint/unbound-method': 'off',
                 '@typescript-eslint/unified-signatures': 'off',
                 '@typescript-eslint/prefer-ts-expect-error': 'warn',
@@ -174,7 +184,7 @@ const eslintConfig = {
     ],
 };
 
-if (buildDynamicConfig().shouldIncludeAll) {
+if (config.shouldIncludeAll) {
     eslintConfig.plugins = eslintConfig.overrides[0].plugins;
     eslintConfig.rules = eslintConfig.overrides[0].rules;
 }

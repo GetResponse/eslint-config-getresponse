@@ -1,5 +1,6 @@
 const semver = require('semver');
 const {PackageJson} = require('./files.cjs');
+const {getTsconfig} = require('get-tsconfig');
 
 let cachedConfig = null;
 
@@ -22,9 +23,28 @@ module.exports.buildDynamicConfig = () => {
         return null;
     }
 
+    function getTsOptions() {
+        const tsConfig = getTsconfig();
+
+        if (tsConfig === null) {
+            return null;
+        }
+
+        const options = tsConfig.config.compilerOptions ?? {};
+
+        return {
+            noImplicitAny: options.noImplicitAny ?? options.strict ?? false,
+        };
+    }
+
+    const tsVersion = getDep('typescript');
+
     return cachedConfig = {
         react: getDep('react'),
-        typescript: getDep('typescript'),
+        typescript: tsVersion === null ? null : {
+            version: tsVersion,
+            config: getTsOptions(),
+        },
         jest: getDep('jest'),
         esm: PackageJson.type === 'module',
         shouldIncludeAll: process.env.DOCS_MODE === '1',

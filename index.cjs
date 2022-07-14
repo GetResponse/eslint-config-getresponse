@@ -1,19 +1,19 @@
 require('@rushstack/eslint-patch/modern-module-resolution');
-const {buildDynamicConfig} = require('./dynamic-config/buildDynamicConfig.cjs');
+const {buildDynamicConfig} = require('./src/dynamic-config/buildDynamicConfig.cjs');
 
 const dynamicConfig = buildDynamicConfig();
 
 module.exports = {
     extends: [
-        './rules/best-practices',
-        './rules/errors',
-        './rules/es6',
-        './rules/node',
-        './rules/style',
-        './rules/variables',
-        dynamicConfig.jest || dynamicConfig.shouldIncludeAll ? './rules/jest' : null,
-        dynamicConfig.typescript || dynamicConfig.shouldIncludeAll ? './rules/typescript' : null,
-        dynamicConfig.react || dynamicConfig.shouldIncludeAll ? './rules/react' : null,
+        './src/rules/best-practices',
+        './src/rules/errors',
+        './src/rules/es6',
+        './src/rules/node',
+        './src/rules/style',
+        './src/rules/variables',
+        dynamicConfig.jest || dynamicConfig.shouldIncludeAll ? './src/rules/jest' : null,
+        dynamicConfig.typescript || dynamicConfig.shouldIncludeAll ? './src/rules/typescript' : null,
+        dynamicConfig.react || dynamicConfig.shouldIncludeAll ? './src/rules/react' : null,
     ]
         .filter(Boolean)
         .map(f => require.resolve(f)),
