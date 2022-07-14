@@ -1,5 +1,7 @@
 require('@rushstack/eslint-patch/modern-module-resolution');
+const {readGitignoreFiles} = require('eslint-gitignore');
 const {buildDynamicConfig} = require('./src/dynamic-config/buildDynamicConfig.cjs');
+const {GitIgnorePath} = require('./src/dynamic-config/files.cjs');
 
 const dynamicConfig = buildDynamicConfig();
 
@@ -31,6 +33,7 @@ module.exports = {
             jsx: true,
         },
     },
+    ignorePatterns: GitIgnorePath ? readGitignoreFiles({cwd: GitIgnorePath}) : undefined,
     settings: {
         react: {
             version: dynamicConfig.react ?? 'detect',
