@@ -1,3 +1,10 @@
+# [7.1.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.0.1...v7.1.0) (2022-07-14)
+
+
+### Features
+
+* GRFRONTEND-1138 Exclude files ignored by git ([9a713b9](https://github.com/getresponse/eslint-config-getresponse/commit/9a713b9f15d57f7f26b0ca9db9e778c5bac93724))
+
 ## [7.0.1](https://github.com/getresponse/eslint-config-getresponse/compare/v7.0.0...v7.0.1) (2022-07-14)
 
 
