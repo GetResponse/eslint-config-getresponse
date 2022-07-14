@@ -1,3 +1,10 @@
+## [7.0.1](https://github.com/getresponse/eslint-config-getresponse/compare/v7.0.0...v7.0.1) (2022-07-14)
+
+
+### Bug Fixes
+
+* GRFRONTEND-1138 Add missing peer dependency ([13a42b1](https://github.com/getresponse/eslint-config-getresponse/commit/13a42b105a76254ed1ee9fe7905db9def4ff852f))
+
 # [7.0.0](https://github.com/getresponse/eslint-config-getresponse/compare/v6.0.3...v7.0.0) (2022-07-14)
 
 
