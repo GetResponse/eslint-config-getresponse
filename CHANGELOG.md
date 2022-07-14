@@ -1,3 +1,25 @@
+# [7.0.0](https://github.com/getresponse/eslint-config-getresponse/compare/v6.0.3...v7.0.0) (2022-07-14)
+
+
+### Bug Fixes
+
+* **React:** GRFRONTEND-1138 Enable `exhaustive-deps` ([6c01101](https://github.com/getresponse/eslint-config-getresponse/commit/6c0110155edd47cf004b6399ca73f7dda89fb52e))
+
+
+### Features
+
+* GRFRONTEND-1138 Enable modern JS rules ([7c403e2](https://github.com/getresponse/eslint-config-getresponse/commit/7c403e283f0209d3727f6cc6619f5beae8e6b4a4))
+* GRFRONTEND-1138 Merge `eslint-config-getresponse` and `eslint-config-getresponse-base` ([9a01aca](https://github.com/getresponse/eslint-config-getresponse/commit/9a01acabe6fde3996ab70dc8e77f53eb5d7d26dc))
+* **React:** GRFRONTEND-1138 Update React rules ([5b07e53](https://github.com/getresponse/eslint-config-getresponse/commit/5b07e531a481025add7964b56f81fbebb5683da0))
+* **Report:** GRFRONTEND-1138 Introduce rules overview page ([54ac572](https://github.com/getresponse/eslint-config-getresponse/commit/54ac572917d5dd01dac6dbd09971c2157f73038f))
+* **TypeScript:** GRFRONTEND-1138 Add non-strict version ([dce064e](https://github.com/getresponse/eslint-config-getresponse/commit/dce064ef44ae65ccda68257e5f63f3073798bc3c))
+* **TypeScript:** GRFRONTEND-1138 Update TS rules ([b301643](https://github.com/getresponse/eslint-config-getresponse/commit/b3016432a66b6d639c4e34677af3bdc67fb018ad))
+
+
+### BREAKING CHANGES
+
+* Rename package to `@gr/eslint-config`
+
 ## [6.0.3](https://github.com/getresponse/eslint-config-getresponse/compare/v6.0.2...v6.0.3) (2022-04-13)
 
 ### Bug Fixes
