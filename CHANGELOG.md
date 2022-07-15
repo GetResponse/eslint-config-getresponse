@@ -1,3 +1,10 @@
+## [7.1.2](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.1...v7.1.2) (2022-07-15)
+
+
+### Bug Fixes
+
+* **TypeScript:** GRFRONTEND-1138 Adjust duplicated rules ([00724d7](https://github.com/getresponse/eslint-config-getresponse/commit/00724d756e92b4f73f8df1a65d0d14c2fab4b10c))
+
 ## [7.1.1](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.0...v7.1.1) (2022-07-15)
 
 
