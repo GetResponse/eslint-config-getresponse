@@ -170,7 +170,9 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
         'react/prefer-exact-props': 'off',
-        'react/no-unstable-nested-components': 'error',
+        'react/no-unstable-nested-components': ['error', {
+            allowAsProps: true,
+        }],
         'react/no-namespace': 'error',
         'react/no-arrow-function-lifecycle': 'warn',
         'react/jsx-no-leaked-render': 'error',
