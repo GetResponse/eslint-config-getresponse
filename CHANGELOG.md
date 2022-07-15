@@ -1,3 +1,10 @@
+## [7.1.5](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.4...v7.1.5) (2022-07-15)
+
+
+### Bug Fixes
+
+* **TypeScript:** GRFRONTEND-1138 Disable `no-unnecessary-type-assertion` due to a bug in the strict mode ([3a8013d](https://github.com/getresponse/eslint-config-getresponse/commit/3a8013d919295f595eacc564444ca077fa81194c))
+
 ## [7.1.4](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.3...v7.1.4) (2022-07-15)
 
 
