@@ -1,3 +1,10 @@
+## [7.1.1](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.0...v7.1.1) (2022-07-15)
+
+
+### Bug Fixes
+
+* **TypeScript:** GRFRONTEND-1138 Disable `no-undef` rule ([3dcc765](https://github.com/getresponse/eslint-config-getresponse/commit/3dcc765559b4e71571a51fb2a75f96b712fb18c7))
+
 # [7.1.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.0.1...v7.1.0) (2022-07-14)
 
 
