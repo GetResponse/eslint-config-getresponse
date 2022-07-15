@@ -1,3 +1,10 @@
+## [7.1.3](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.2...v7.1.3) (2022-07-15)
+
+
+### Bug Fixes
+
+* **Dynamic configuration:** GRFRONTEND-1138 Fix support for projects without `package.json` file ([5864505](https://github.com/getresponse/eslint-config-getresponse/commit/5864505276157a8edd5640e9aa3afa2474170bc7))
+
 ## [7.1.2](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.1...v7.1.2) (2022-07-15)
 
 
