@@ -1,3 +1,10 @@
+## [7.1.4](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.3...v7.1.4) (2022-07-15)
+
+
+### Bug Fixes
+
+* **React:** GRFRONTEND-1138 Allow usage of dynamic components in props ([4f482ed](https://github.com/getresponse/eslint-config-getresponse/commit/4f482ed056f19e1b0c520fcef3f5b1713aaf6fb2))
+
 ## [7.1.3](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.2...v7.1.3) (2022-07-15)
 
 
