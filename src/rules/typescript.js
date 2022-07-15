@@ -140,6 +140,7 @@ const eslintConfig = {
                     checksVoidReturn: false,
                 }],
                 '@typescript-eslint/no-namespace': 'off',
+                'no-throw-literal': 'off',
                 '@typescript-eslint/no-throw-literal': 'warn',
                 '@typescript-eslint/no-type-alias': 'off',
                 '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'off',

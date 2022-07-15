@@ -39,7 +39,7 @@ module.exports = {
         'no-sparse-arrays': 'warn',
         'no-template-curly-in-string': 'error',
         'no-unexpected-multiline': 'warn',
-        'no-unreachable': 'error',
+        'no-unreachable': 'warn',
         'no-unsafe-finally': 'off',
         'no-unsafe-negation': 'error',
         'no-unsafe-optional-chaining': 'error',
