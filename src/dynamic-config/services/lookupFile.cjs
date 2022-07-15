@@ -1,16 +1,21 @@
 const path = require('path');
 const fs = require('fs');
 
-const cwd = process.cwd();
+module.exports.lookupFile = (basePath, ...files) => {
+    let currentPath = basePath;
 
-module.exports.lookupFile = (...files) => {
-    for (const file of files) {
-        const filePath = path.join(cwd, file);
+    do {
+        for (const file of files) {
+            const testedPath = path.join(currentPath, file);
 
-        if (fs.existsSync(filePath)) {
-            return filePath;
+            if (fs.existsSync(testedPath)) {
+                return testedPath;
+            }
         }
+
+        currentPath = path.resolve(currentPath, '..');
     }
+    while (currentPath !== '/');
 
     return null;
 };

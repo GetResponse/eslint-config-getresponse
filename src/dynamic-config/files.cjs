@@ -1,9 +1,11 @@
 const fs = require('fs');
-const {lookupFile} = require('./services/lookupFile.cjs');
 const path = require('path');
+const {lookupFile} = require('./services/lookupFile.cjs');
 
 let pjsonContent = null;
 let gitIgnorePath = undefined;
+
+const cwd = process.cwd();
 
 module.exports = {
     get PackageJson() {
@@ -17,7 +19,7 @@ module.exports = {
             pjsonPath = process.env.npm_package_json;
         }
         else {
-            pjsonPath = lookupFile('package.json');
+            pjsonPath = lookupFile(cwd, 'package.json');
         }
 
         if (pjsonPath === null) {
@@ -27,23 +29,6 @@ module.exports = {
         return pjsonContent = JSON.parse(fs.readFileSync(pjsonPath).toString());
     },
     get GitIgnorePath() {
-        if (gitIgnorePath !== undefined) {
-            return gitIgnorePath;
-        }
-
-        let currentPath = process.cwd();
-
-        do {
-            const testedPath = path.join(currentPath, '.gitignore');
-
-            if (fs.existsSync(testedPath)) {
-                return gitIgnorePath = path.dirname(testedPath);
-            }
-
-            currentPath = path.resolve(currentPath, '..');
-        }
-        while (currentPath !== '/');
-
-        return gitIgnorePath = null;
+        return gitIgnorePath ??= path.dirname(lookupFile(cwd, '.gitignore'));
     },
 };

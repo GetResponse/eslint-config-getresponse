@@ -11,7 +11,7 @@ module.exports.buildDynamicConfig = () => {
 
     function getDep(name) {
         for (const type of ['dependencies', 'devDependencies', 'peerDependencies']) {
-            const requestedVersion = PackageJson[type]?.[name];
+            const requestedVersion = PackageJson?.[type]?.[name];
 
             if (!requestedVersion) {
                 continue;
