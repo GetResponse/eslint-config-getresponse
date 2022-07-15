@@ -147,7 +147,8 @@ const eslintConfig = {
                 '@typescript-eslint/no-unnecessary-condition': 'off',
                 '@typescript-eslint/no-unnecessary-qualifier': 'warn',
                 '@typescript-eslint/no-unnecessary-type-arguments': 'warn',
-                '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
+                // https://github.com/typescript-eslint/typescript-eslint/issues/2248
+                '@typescript-eslint/no-unnecessary-type-assertion': 'off',
                 '@typescript-eslint/no-unused-vars-experimental': 'off',
                 '@typescript-eslint/prefer-as-const': 'warn',
                 '@typescript-eslint/prefer-for-of': 'warn',
