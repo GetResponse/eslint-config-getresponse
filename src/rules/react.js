@@ -183,6 +183,7 @@ module.exports = {
             rules: {
                 'react/prop-types': 'off',
                 'react/no-unused-prop-types': 'off',
+                'react/jsx-no-undef': 'off',
             },
         },
     ],

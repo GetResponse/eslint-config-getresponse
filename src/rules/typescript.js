@@ -179,6 +179,7 @@ const eslintConfig = {
                 '@typescript-eslint/unbound-method': 'off',
                 '@typescript-eslint/unified-signatures': 'off',
                 '@typescript-eslint/prefer-ts-expect-error': 'warn',
+                'no-undef': 'off',
             },
         },
     ],
