@@ -1,3 +1,10 @@
+## [7.1.6](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.5...v7.1.6) (2022-07-18)
+
+
+### Bug Fixes
+
+* **TypeScript:** Disable `@typescript-eslint/return-await` ([6326a19](https://github.com/getresponse/eslint-config-getresponse/commit/6326a197fd646e79841dcb28cf737a1df421cbbb))
+
 ## [7.1.5](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.4...v7.1.5) (2022-07-15)
 
 
