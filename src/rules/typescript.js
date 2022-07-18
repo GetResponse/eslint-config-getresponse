@@ -166,7 +166,8 @@ const eslintConfig = {
                 '@typescript-eslint/restrict-plus-operands': 'off',
                 '@typescript-eslint/restrict-template-expressions': 'off',
                 'no-return-await': 'off',
-                '@typescript-eslint/return-await': ['error', 'in-try-catch'],
+                // disabled due to false positive
+                '@typescript-eslint/return-await': 'off',
                 '@typescript-eslint/triple-slash-reference': 'error',
                 '@typescript-eslint/type-annotation-spacing': 'warn',
                 '@typescript-eslint/typedef': config.typescript?.config.noImplicitAny ? 'off' : ['warn', {
