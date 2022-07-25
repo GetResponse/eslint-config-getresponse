@@ -1,6 +1,6 @@
 # @getresponse/eslint-config
 
-[![npm version](https://badge.fury.io/js/eslint-config-getresponse.svg)](https://badge.fury.io/js/eslint-config-getresponse)
+[![npm version](https://badge.fury.io/js/@getresponse%2Feslint-config.svg)](https://badge.fury.io/js/@getresponse%2Feslint-config)
 [![Build Status](https://github.com/GetResponse/eslint-config-getresponse/actions/workflows/main.yml/badge.svg)](https://github.com/GetResponse/eslint-config-getresponse/actions)
 ![Dependencies](https://img.shields.io/librariesio/github/GetResponse/eslint-config-getresponse.svg)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://badges.mit-license.org)
