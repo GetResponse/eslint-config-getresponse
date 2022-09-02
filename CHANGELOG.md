@@ -1,3 +1,11 @@
+## [7.1.7](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.6...v7.1.7) (2022-09-02)
+
+
+### Bug Fixes
+
+* **TypeScript:** Update `tsconfig` glob ([2787a94](https://github.com/getresponse/eslint-config-getresponse/commit/2787a94cb68c5cc615b0df9934249a280f712517))
+* Update deps ([84d34a0](https://github.com/getresponse/eslint-config-getresponse/commit/84d34a01975a0266ba44f79a90eeb237689da7b3))
+
 ## [7.1.6](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.5...v7.1.6) (2022-07-18)
 
 
