@@ -51,7 +51,12 @@ module.exports = {
                 },
                 lib: ['ESNext', 'DOM', 'DOM.Iterable', 'ES6', 'ES7', 'WebWorker', 'ScriptHost'],
                 warnOnUnsupportedTypeScriptVersion: false,
-                project: ['./**/tsconfig.eslint.json', './**/tsconfig.json'],
+                project: [
+                    './**/tsconfig.eslint.json',
+                    './**/tsconfig.json',
+                    '**/tsconfig.eslint.json',
+                    '**/tsconfig.json',
+                ],
                 createDefaultProgram: true,
             },
         },
