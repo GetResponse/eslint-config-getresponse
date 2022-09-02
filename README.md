@@ -19,3 +19,5 @@ An opinionated ESLint ruleset targeting TypeScript + React web apps
 
 2. Add `"extends": "@getresponse/eslint-config"` to your ESLint [configuration file](https://eslint.org/docs/latest/user-guide/configuring/configuration-files)
 
+## Rules list
+The web version of the rules list is available on [GitHub Pages](https://getresponse.github.io/eslint-config-getresponse/)
