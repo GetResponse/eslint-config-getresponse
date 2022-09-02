@@ -1,3 +1,10 @@
+## [7.1.8](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.7...v7.1.8) (2022-09-02)
+
+
+### Bug Fixes
+
+* remove no-jest-import rule ([5d230ff](https://github.com/getresponse/eslint-config-getresponse/commit/5d230ffeef4ec889bfd958775af8b5af1cc906f0))
+
 ## [7.1.7](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.6...v7.1.7) (2022-09-02)
 
 
