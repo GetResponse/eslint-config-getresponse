@@ -175,7 +175,9 @@ module.exports = {
         }],
         'react/no-namespace': 'error',
         'react/no-arrow-function-lifecycle': 'warn',
-        'react/jsx-no-leaked-render': 'error',
+        'react/jsx-no-leaked-render': ['error', {
+            validStrategies: ['ternary'],
+        }],
         'react/jsx-no-constructed-context-values': 'error',
         'react/iframe-missing-sandbox': 'error',
     },
