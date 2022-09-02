@@ -1,3 +1,10 @@
+## [7.1.9](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.8...v7.1.9) (2022-09-02)
+
+
+### Bug Fixes
+
+* jsx-no-leaked-render valid strategy = ternary ([6f96cdd](https://github.com/getresponse/eslint-config-getresponse/commit/6f96cdd9a0ccf889a8b06fd2ee10269770b8f988))
+
 ## [7.1.8](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.7...v7.1.8) (2022-09-02)
 
 

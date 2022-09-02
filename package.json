@@ -1,6 +1,6 @@
 {
   "name": "@getresponse/eslint-config",
-  "version": "7.1.8",
+  "version": "7.1.9",
   "description": "GetResponse ESLint shareable config",
   "keywords": [
     "config",
