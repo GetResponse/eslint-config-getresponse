@@ -32,7 +32,6 @@ module.exports = {
         'jest/no-if': 'warn',
         'jest/no-interpolation-in-snapshots': 'off',
         'jest/no-jasmine-globals': 'error',
-        'jest/no-jest-import': 'warn',
         'jest/no-large-snapshots': 'off',
         'jest/no-mocks-import': 'error',
         'jest/no-restricted-matchers': [
