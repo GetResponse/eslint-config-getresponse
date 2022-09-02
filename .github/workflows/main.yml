@@ -32,6 +32,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Build docs
+        run: '[[ -d public ]] || npm run build:docs'
       - name: Publish pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
