@@ -1,3 +1,10 @@
+## [7.1.10](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.9...v7.1.10) (2023-07-05)
+
+
+### Bug Fixes
+
+* runtime exception thrown when .gitignore file missing ([ee90f19](https://github.com/getresponse/eslint-config-getresponse/commit/ee90f192b123dd99e9e7591b140bc8c10b8df10f))
+
 ## [7.1.9](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.8...v7.1.9) (2022-09-02)
 
 
