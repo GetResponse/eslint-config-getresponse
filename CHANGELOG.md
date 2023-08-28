@@ -1,3 +1,10 @@
+# [7.2.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.10...v7.2.0) (2023-08-28)
+
+
+### Features
+
+* support typescript v5 by updating eslint packages to latest tags ([3c546da](https://github.com/getresponse/eslint-config-getresponse/commit/3c546dac998ce434dae649eca4dabcf7772bbaac))
+
 ## [7.1.10](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.9...v7.1.10) (2023-07-05)
 
 
