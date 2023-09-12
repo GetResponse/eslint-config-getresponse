@@ -1,3 +1,10 @@
+# [7.3.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.2.0...v7.3.0) (2023-09-12)
+
+
+### Features
+
+* typescript-eslint/strict-boolean-expressions warn ([93e5e3a](https://github.com/getresponse/eslint-config-getresponse/commit/93e5e3a5ff00a5da68c77b7f83c26c2daf4c5fb2))
+
 # [7.2.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.10...v7.2.0) (2023-08-28)
 
 
