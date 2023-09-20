@@ -1,3 +1,17 @@
+# [7.4.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.3.0...v7.4.0) (2023-09-20)
+
+
+### Bug Fixes
+
+* conditional rule @typescript-eslint/strict-boolean-expressions ([453e330](https://github.com/getresponse/eslint-config-getresponse/commit/453e330a1e4fe3285377dc7fddfce3444222daa4))
+* update deps ([f414a68](https://github.com/getresponse/eslint-config-getresponse/commit/f414a68e132b2476cf01942cbbbbb90e911dbffa))
+* use deprecated createDefaultProgram parserOption ([8d26442](https://github.com/getresponse/eslint-config-getresponse/commit/8d264427ee207fd0b773372f4ee43f0fed8d521d))
+
+
+### Features
+
+* @typescript-eslint/no-duplicate-type-constituents warn ([ab2b4df](https://github.com/getresponse/eslint-config-getresponse/commit/ab2b4df748a5a44acf3ef3701e2f3abac9433d88))
+
 # [7.3.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.2.0...v7.3.0) (2023-09-12)
 
 
