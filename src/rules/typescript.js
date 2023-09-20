@@ -91,7 +91,7 @@ const eslintConfig = {
                 '@typescript-eslint/semi': ['warn', 'always'],
                 'space-before-function-paren': 'off',
                 '@typescript-eslint/space-before-function-paren': ['warn', { anonymous: 'always', named: 'never' }],
-                '@typescript-eslint/strict-boolean-expressions': 'warn',
+                '@typescript-eslint/strict-boolean-expressions': config.typescript?.config.strictNullChecks ? 'warn' : 'off',
                 '@typescript-eslint/switch-exhaustiveness-check': 'off',
                 'no-redeclare': 'off',
                 '@typescript-eslint/no-redeclare': 'error',
