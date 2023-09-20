@@ -182,6 +182,7 @@ const eslintConfig = {
                 '@typescript-eslint/unified-signatures': 'off',
                 '@typescript-eslint/prefer-ts-expect-error': 'warn',
                 'no-undef': 'off',
+                '@typescript-eslint/no-duplicate-type-constituents': 'warn',
             },
         },
     ],
