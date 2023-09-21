@@ -1,3 +1,15 @@
+# [8.0.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.4.0...v8.0.0) (2023-09-21)
+
+
+### Features
+
+* rule @typescript-eslint/consistent-type-imports warn ([e3fa7ac](https://github.com/getresponse/eslint-config-getresponse/commit/e3fa7ac23ac714e3e6e001509f75002ccadc0279))
+
+
+### BREAKING CHANGES
+
+* omitting type specifier in import will throw warning
+
 # [7.4.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.3.0...v7.4.0) (2023-09-20)
 
 
