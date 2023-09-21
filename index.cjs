@@ -57,7 +57,8 @@ module.exports = {
                     '**/tsconfig.eslint.json',
                     '**/tsconfig.json',
                 ],
-                createDefaultProgram: true,
+                // https://typescript-eslint.io/packages/parser/#experimental_useprojectservice
+                DEPRECATED__createDefaultProgram: true,
             },
         },
         {
