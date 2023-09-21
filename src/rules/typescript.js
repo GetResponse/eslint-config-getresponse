@@ -183,6 +183,11 @@ const eslintConfig = {
                 '@typescript-eslint/prefer-ts-expect-error': 'warn',
                 'no-undef': 'off',
                 '@typescript-eslint/no-duplicate-type-constituents': 'warn',
+                '@typescript-eslint/consistent-type-imports': ['warn', {
+                    prefer: 'type-imports',
+                    fixStyle: 'inline-type-imports',
+                    disallowTypeAnnotations: false,
+                }],
             },
         },
     ],
