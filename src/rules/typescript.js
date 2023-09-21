@@ -182,6 +182,11 @@ const eslintConfig = {
                 '@typescript-eslint/unified-signatures': 'off',
                 '@typescript-eslint/prefer-ts-expect-error': 'warn',
                 'no-undef': 'off',
+                '@typescript-eslint/consistent-type-imports': ['warn', {
+                    prefer: 'type-imports',
+                    fixStyle: 'inline-type-imports',
+                    disallowTypeAnnotations: false,
+                }],
             },
         },
     ],
