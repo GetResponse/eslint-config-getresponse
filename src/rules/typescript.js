@@ -91,8 +91,7 @@ const eslintConfig = {
                 '@typescript-eslint/semi': ['warn', 'always'],
                 'space-before-function-paren': 'off',
                 '@typescript-eslint/space-before-function-paren': ['warn', { anonymous: 'always', named: 'never' }],
-                // TBD
-                '@typescript-eslint/strict-boolean-expressions': 'off',
+                '@typescript-eslint/strict-boolean-expressions': config.typescript?.config.strictNullChecks ? 'warn' : 'off',
                 '@typescript-eslint/switch-exhaustiveness-check': 'off',
                 'no-redeclare': 'off',
                 '@typescript-eslint/no-redeclare': 'error',
@@ -183,6 +182,12 @@ const eslintConfig = {
                 '@typescript-eslint/unified-signatures': 'off',
                 '@typescript-eslint/prefer-ts-expect-error': 'warn',
                 'no-undef': 'off',
+                '@typescript-eslint/no-duplicate-type-constituents': 'warn',
+                '@typescript-eslint/consistent-type-imports': ['warn', {
+                    prefer: 'type-imports',
+                    fixStyle: 'inline-type-imports',
+                    disallowTypeAnnotations: false,
+                }],
             },
         },
     ],

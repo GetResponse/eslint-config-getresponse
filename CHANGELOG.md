@@ -1,3 +1,64 @@
+# [8.0.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.4.0...v8.0.0) (2023-09-21)
+
+
+### Features
+
+* rule @typescript-eslint/consistent-type-imports warn ([e3fa7ac](https://github.com/getresponse/eslint-config-getresponse/commit/e3fa7ac23ac714e3e6e001509f75002ccadc0279))
+
+
+### BREAKING CHANGES
+
+* omitting type specifier in import will throw warning
+
+# [7.4.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.3.0...v7.4.0) (2023-09-20)
+
+
+### Bug Fixes
+
+* conditional rule @typescript-eslint/strict-boolean-expressions ([453e330](https://github.com/getresponse/eslint-config-getresponse/commit/453e330a1e4fe3285377dc7fddfce3444222daa4))
+* update deps ([f414a68](https://github.com/getresponse/eslint-config-getresponse/commit/f414a68e132b2476cf01942cbbbbb90e911dbffa))
+* use deprecated createDefaultProgram parserOption ([8d26442](https://github.com/getresponse/eslint-config-getresponse/commit/8d264427ee207fd0b773372f4ee43f0fed8d521d))
+
+
+### Features
+
+* @typescript-eslint/no-duplicate-type-constituents warn ([ab2b4df](https://github.com/getresponse/eslint-config-getresponse/commit/ab2b4df748a5a44acf3ef3701e2f3abac9433d88))
+
+# [7.3.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.2.0...v7.3.0) (2023-09-12)
+
+
+### Features
+
+* typescript-eslint/strict-boolean-expressions warn ([93e5e3a](https://github.com/getresponse/eslint-config-getresponse/commit/93e5e3a5ff00a5da68c77b7f83c26c2daf4c5fb2))
+
+# [7.2.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.10...v7.2.0) (2023-08-28)
+
+
+### Features
+
+* support typescript v5 by updating eslint packages to latest tags ([3c546da](https://github.com/getresponse/eslint-config-getresponse/commit/3c546dac998ce434dae649eca4dabcf7772bbaac))
+
+## [7.1.10](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.9...v7.1.10) (2023-07-05)
+
+
+### Bug Fixes
+
+* runtime exception thrown when .gitignore file missing ([ee90f19](https://github.com/getresponse/eslint-config-getresponse/commit/ee90f192b123dd99e9e7591b140bc8c10b8df10f))
+
+## [7.1.9](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.8...v7.1.9) (2022-09-02)
+
+
+### Bug Fixes
+
+* jsx-no-leaked-render valid strategy = ternary ([6f96cdd](https://github.com/getresponse/eslint-config-getresponse/commit/6f96cdd9a0ccf889a8b06fd2ee10269770b8f988))
+
+## [7.1.8](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.7...v7.1.8) (2022-09-02)
+
+
+### Bug Fixes
+
+* remove no-jest-import rule ([5d230ff](https://github.com/getresponse/eslint-config-getresponse/commit/5d230ffeef4ec889bfd958775af8b5af1cc906f0))
+
 ## [7.1.7](https://github.com/getresponse/eslint-config-getresponse/compare/v7.1.6...v7.1.7) (2022-09-02)
 
 
