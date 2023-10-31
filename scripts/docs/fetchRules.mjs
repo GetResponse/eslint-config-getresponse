@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 async function fetchAndParse(url, regexp, accumulator) {
     const result = await fetch(url);
 
