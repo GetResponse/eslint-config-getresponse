@@ -1,3 +1,12 @@
+## [8.0.1](https://github.com/getresponse/eslint-config-getresponse/compare/v8.0.0...v8.0.1) (2023-10-31)
+
+
+### Bug Fixes
+
+* Bump Node.js to 20.x ([e58c595](https://github.com/getresponse/eslint-config-getresponse/commit/e58c595f46627c66be11295cccc91af471d5b3bd))
+* **TypeScript:** Handle missing tsconfig file ([ded40ba](https://github.com/getresponse/eslint-config-getresponse/commit/ded40ba6bb2d365656e0e43c6d21736d006eefa4))
+* Update dependencies ([26e9a48](https://github.com/getresponse/eslint-config-getresponse/commit/26e9a487c4f72068cfa58c37875837b166a30157))
+
 # [8.0.0](https://github.com/getresponse/eslint-config-getresponse/compare/v7.4.0...v8.0.0) (2023-09-21)
 
 
