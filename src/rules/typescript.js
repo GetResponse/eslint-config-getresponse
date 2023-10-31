@@ -170,7 +170,7 @@ const eslintConfig = {
                 '@typescript-eslint/return-await': 'off',
                 '@typescript-eslint/triple-slash-reference': 'error',
                 '@typescript-eslint/type-annotation-spacing': 'warn',
-                '@typescript-eslint/typedef': config.typescript?.config.noImplicitAny ? 'off' : ['warn', {
+                '@typescript-eslint/typedef': config.typescript?.config?.noImplicitAny ? 'off' : ['warn', {
                     arrayDestructuring: false,
                     arrowParameter: false,
                     memberVariableDeclaration: false,
