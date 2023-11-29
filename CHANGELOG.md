@@ -1,3 +1,10 @@
+## [8.0.2](https://github.com/getresponse/eslint-config-getresponse/compare/v8.0.1...v8.0.2) (2023-11-29)
+
+
+### Bug Fixes
+
+* update 'react/jsx-filename-extension' rule to allow JSX inside .mdx files ([160473e](https://github.com/getresponse/eslint-config-getresponse/commit/160473e97832f59d9ec8913841b854770d343add))
+
 ## [8.0.1](https://github.com/getresponse/eslint-config-getresponse/compare/v8.0.0...v8.0.1) (2023-10-31)
 
 
