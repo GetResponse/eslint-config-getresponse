@@ -127,7 +127,7 @@ module.exports = {
         'react/jsx-curly-spacing': ['warn', 'never'],
         'react/jsx-equals-spacing': ['warn', 'never'],
         'react/jsx-filename-extension': ['error', {
-            extensions: ['.js', '.jsx', '.tsx'],
+            extensions: ['.js', '.jsx', '.tsx', '.mdx'],
         }],
         'react/jsx-first-prop-new-line': 'off',
         'react/jsx-fragments': ['warn', 'element'],
