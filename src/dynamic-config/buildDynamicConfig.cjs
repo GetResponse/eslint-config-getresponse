@@ -47,6 +47,7 @@ module.exports.buildDynamicConfig = () => {
         },
         jest: getDep('jest'),
         esm: PackageJson.type === 'module',
+        playwright: getDep('@playwright/test'),
         shouldIncludeAll: process.env.DOCS_MODE === '1',
     };
 };
