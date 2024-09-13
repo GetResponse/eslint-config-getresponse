@@ -30,9 +30,9 @@ function fetchStandardRules() {
 function fetchReactRules() {
     return fetchAndParse(
         'https://raw.githubusercontent.com/jsx-eslint/eslint-plugin-react/master/README.md',
-        /^.*?\[(react\/.*?)]\((.*?)\) \| (.*?) \|/gm,
+        /^.*?\[(.*?)]\((.*?)\)\s*\|\s*(.*?)\s*\|/gm,
         ([, name, path, description]) => ({
-            [name.trim()]: {
+            [`react/${name.trim()}`]: {
                 description: description.trim(),
                 url: new URL(path.trim(), 'https://github.com/jsx-eslint/eslint-plugin-react/blob/master/').toString(),
             },
@@ -62,7 +62,20 @@ function fetchJestRules() {
                 description: description.trim(),
                 url: new URL(path, 'https://github.com/jest-community/eslint-plugin-jest/blob/main/').toString(),
             },
-        })
+        }),
+    );
+}
+
+function fetchPlaywrightRules() {
+    return fetchAndParse(
+        'https://raw.githubusercontent.com/playwright-community/eslint-plugin-playwright/main/README.md',
+        /^.*?\[(.*?)]\((.*?)\)\s*\|\s*(.*?)\s*\|/gm,
+        ([, name, url, description]) => ({
+            [`playwright/${name.trim()}`]: {
+                description: description.trim(),
+                url: new URL(url.trim()).toString(),
+            },
+        }),
     );
 }
 
@@ -72,7 +85,8 @@ export async function fetchRules() {
         fetchReactRules(),
         fetchTypeScriptRules(),
         fetchJestRules(),
+        fetchPlaywrightRules(),
     ]);
 
-    return data.reduce((all, current) => ({...all, ...current}), {});
+    return data.reduce((all, current) => ({ ...all, ...current }), {});
 }
