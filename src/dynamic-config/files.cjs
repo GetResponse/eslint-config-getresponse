@@ -4,6 +4,7 @@ const { lookupFile } = require("./services/lookupFile.cjs");
 
 let pjsonContent = null;
 let gitIgnorePath = undefined;
+let playwrightConfigPath = null;
 
 const cwd = process.cwd();
 
@@ -39,4 +40,12 @@ module.exports = {
 
     return (gitIgnorePath ??= path.dirname(gitIgnoreLookup));
   },
+  get PlaywrightConfig() {
+    if (playwrightConfigPath !== null) return fs.readFileSync(playwrightConfigPath).toString();
+
+    const playwrightLookup = lookupFile(cwd, "playwright.config.ts", "playwright.config.js", "playwright.config.mts", "playwright.config.mjs");
+    if (!playwrightLookup) return null;
+    playwrightConfigPath ??= playwrightLookup;
+    return fs.readFileSync(playwrightConfigPath).toString();
+  }
 };
