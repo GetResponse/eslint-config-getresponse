@@ -1,3 +1,10 @@
+# [8.1.0](https://github.com/getresponse/eslint-config-getresponse/compare/v8.0.2...v8.1.0) (2024-09-13)
+
+
+### Features
+
+* add playwright eslint rules ([c8c4ee9](https://github.com/getresponse/eslint-config-getresponse/commit/c8c4ee939321a5ed6de3d6d2fcc24154a7db0d28))
+
 ## [8.0.2](https://github.com/getresponse/eslint-config-getresponse/compare/v8.0.1...v8.0.2) (2023-11-29)
 
 
