@@ -1,3 +1,10 @@
+## [8.1.1](https://github.com/getresponse/eslint-config-getresponse/compare/v8.1.0...v8.1.1) (2024-09-13)
+
+
+### Bug Fixes
+
+* **playwright/expect-expect:** turn off warning ([3db45ce](https://github.com/getresponse/eslint-config-getresponse/commit/3db45ceb3fc0d02bd87d3d76bd9bb9924773ab3d))
+
 # [8.1.0](https://github.com/getresponse/eslint-config-getresponse/compare/v8.0.2...v8.1.0) (2024-09-13)
 
 
