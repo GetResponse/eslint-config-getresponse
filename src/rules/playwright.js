@@ -63,7 +63,7 @@ const playwrightConfig = {
                 'playwright',
             ],
             rules: {
-                'playwright/expect-expect': 'warn',
+                'playwright/expect-expect': 'off',
                 'playwright/max-expects': 'off',
                 'playwright/max-nested-describe': ['error', { max: 2 }],
                 'playwright/missing-playwright-await': 'error',
