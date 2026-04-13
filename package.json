@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/getresponse/eslint-config-getresponse.git"
+    "url": "https://github.com/GetResponse/eslint-config-getresponse"
   },
   "license": "MIT",
   "author": "GetResponse (https://github.com/GetResponse)",
