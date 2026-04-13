@@ -1,11 +1,11 @@
 async function fetchAndParse(url, regexp, accumulator) {
-    const result = await fetch(url);
+    const response = await fetch(url);
 
-    if (!result.ok) {
+    if (!response.ok) {
         throw new Error(`Failed to resolve rules from: ${url}`);
     }
 
-    const content = await result.text();
+    const content = await response.text();
     const matches = content.matchAll(regexp);
 
     return Array.from(matches).reduce(

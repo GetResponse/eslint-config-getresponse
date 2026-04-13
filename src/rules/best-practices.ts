@@ -1,4 +1,4 @@
-module.exports = {
+export = {
     rules: {
         'accessor-pairs': 'error',
         'array-callback-return': 'error',

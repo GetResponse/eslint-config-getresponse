@@ -1,40 +1,41 @@
-require('@rushstack/eslint-patch/modern-module-resolution');
-const {readGitignoreFiles} = require('eslint-gitignore');
-const {buildDynamicConfig} = require('./src/dynamic-config/buildDynamicConfig.cjs');
-const {GitIgnorePath} = require('./src/dynamic-config/files.cjs');
+import '@rushstack/eslint-patch/modern-module-resolution';
+import { readGitignoreFiles } from 'eslint-gitignore';
+import { buildDynamicConfig } from './dynamic-config/buildDynamicConfig';
+import { getGitIgnorePath } from './dynamic-config/files';
 
 const dynamicConfig = buildDynamicConfig();
+const gitIgnorePath = getGitIgnorePath();
 
-module.exports = {
+export = {
     extends: [
-        './src/rules/best-practices',
-        './src/rules/errors',
-        './src/rules/es6',
-        './src/rules/node',
-        './src/rules/style',
-        './src/rules/variables',
-        dynamicConfig.jest || dynamicConfig.shouldIncludeAll ? './src/rules/jest' : null,
-        dynamicConfig.typescript || dynamicConfig.shouldIncludeAll ? './src/rules/typescript' : null,
-        dynamicConfig.react || dynamicConfig.shouldIncludeAll ? './src/rules/react' : null,
-        dynamicConfig.playwright || dynamicConfig.shouldIncludeAll ? './src/rules/playwright' : null,
+        './rules/best-practices',
+        './rules/errors',
+        './rules/es6',
+        './rules/node',
+        './rules/style',
+        './rules/variables',
+        dynamicConfig.jest || dynamicConfig.shouldIncludeAll ? './rules/jest' : null,
+        dynamicConfig.typescript || dynamicConfig.shouldIncludeAll ? './rules/typescript' : null,
+        dynamicConfig.react || dynamicConfig.shouldIncludeAll ? './rules/react' : null,
+        dynamicConfig.playwright || dynamicConfig.shouldIncludeAll ? './rules/playwright' : null,
     ]
         .filter(Boolean)
-        .map(f => require.resolve(f)),
+        .map((f) => require.resolve(f as string)),
     env: {
         browser: true,
         commonjs: !dynamicConfig.esm,
         es6: true,
-        jest: !!dynamicConfig.jest,
+        jest: typeof dynamicConfig.jest === 'string',
         node: true,
     },
     parserOptions: {
-        ecmaVersion: 2020,
+        ecmaVersion: 2022,
         sourceType: 'module',
         ecmaFeatures: {
             jsx: true,
         },
     },
-    ignorePatterns: GitIgnorePath ? readGitignoreFiles({cwd: GitIgnorePath}) : undefined,
+    ignorePatterns: gitIgnorePath ? readGitignoreFiles({ cwd: gitIgnorePath }) : undefined,
     settings: {
         react: {
             version: dynamicConfig.react ?? 'detect',
@@ -45,12 +46,12 @@ module.exports = {
             files: ['**/*.ts', '**/*.tsx'],
             parser: '@typescript-eslint/parser',
             parserOptions: {
-                ecmaVersion: 2020,
+                ecmaVersion: 2022,
                 sourceType: 'module',
                 ecmaFeatures: {
                     jsx: true,
                 },
-                lib: ['ESNext', 'DOM', 'DOM.Iterable', 'ES6', 'ES7', 'WebWorker', 'ScriptHost'],
+                lib: ['ESNext', 'DOM', 'DOM.Iterable', 'es2022', 'WebWorker', 'ScriptHost'],
                 warnOnUnsupportedTypeScriptVersion: false,
                 project: [
                     './**/tsconfig.eslint.json',
@@ -58,8 +59,6 @@ module.exports = {
                     '**/tsconfig.eslint.json',
                     '**/tsconfig.json',
                 ],
-                // https://typescript-eslint.io/packages/parser/#experimental_useprojectservice
-                DEPRECATED__createDefaultProgram: true,
             },
         },
         {

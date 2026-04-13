@@ -1,8 +1,9 @@
-const { buildDynamicConfig } = require('../dynamic-config/buildDynamicConfig.cjs');
-const semver = require('semver');
+import { buildDynamicConfig } from '../dynamic-config/buildDynamicConfig';
+import semver from 'semver';
+
 const config = buildDynamicConfig();
 
-module.exports = {
+export = {
     plugins: [
         'react',
         'react-hooks',

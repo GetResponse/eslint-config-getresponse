@@ -1,4 +1,4 @@
-module.exports = {
+export = {
     rules: {
         'init-declarations': 'off',
         'no-delete-var': 'off',

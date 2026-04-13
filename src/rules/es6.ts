@@ -1,4 +1,4 @@
-module.exports = {
+export = {
     env: {
         es6: true,
     },

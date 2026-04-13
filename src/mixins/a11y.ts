@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-module.exports = {
+export = {
     plugins: [
         'jsx-a11y',
     ],

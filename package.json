@@ -20,54 +20,56 @@
   },
   "license": "MIT",
   "author": "GetResponse (https://github.com/GetResponse)",
-  "main": "index.cjs",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./a11y": "./dist/mixins/a11y.js",
+    "./mixins/a11y": "./dist/mixins/a11y.js"
+  },
   "files": [
-    "index.cjs",
-    "mixins",
-    "public",
-    "src"
+    "dist",
+    "public"
   ],
   "scripts": {
-    "build": "npm run build:docs",
+    "build": "npm run build:ts && npm run build:docs",
+    "build:ts": "tsc --build",
     "build:docs": "cross-env DOCS_MODE=1 node scripts/buildDocs.mjs",
     "lint": "eslint .",
     "release": "semantic-release",
-    "rules": "eslint-find-rules -u ./index.cjs",
+    "rules": "eslint-find-rules -u ./dist/index.js",
     "test": "npm run lint",
     "prepublishOnly": "npm run build"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "devDependencies": {
+    "@getresponse/tsconfig": "2.0.1",
     "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/commit-analyzer": "11.0.0",
+    "@semantic-release/commit-analyzer": "13.0.1",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "^9.2.1",
-    "@semantic-release/npm": "11.0.0",
-    "@semantic-release/release-notes-generator": "12.0.0",
-    "@types/semver": "^7.5.4",
-    "cross-env": "7.0.3",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.52.0",
-    "eslint-find-rules": "4.1.0",
-    "pug": "3.0.2",
-    "semantic-release": "^22.0.6"
+    "@semantic-release/github": "12.0.6",
+    "@semantic-release/npm": "13.1.5",
+    "@semantic-release/release-notes-generator": "14.1.0",
+    "@types/node": "25.6.0",
+    "@types/semver": "7.7.1",
+    "cross-env": "10.1.0",
+    "eslint": "^8.52.1",
+    "eslint-find-rules": "5.0.0",
+    "pug": "3.0.4",
+    "semantic-release": "25.0.3",
+    "typescript": "6.0.2"
   },
   "dependencies": {
-    "@rushstack/eslint-patch": "1.5.1",
-    "@typescript-eslint/eslint-plugin": "^6.9.1",
-    "@typescript-eslint/parser": "^6.9.1",
+    "@rushstack/eslint-patch": "1.16.1",
+    "@stylistic/eslint-plugin": "3.1.0",
+    "@typescript-eslint/eslint-plugin": "8.58.1",
+    "@typescript-eslint/parser": "8.58.1",
     "eslint-gitignore": "0.1.0",
-    "eslint-plugin-jest": "^27.6.0",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-playwright": "^1.6.2",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "4.6.0",
-    "get-tsconfig": "^4.7.2",
-    "semver": "7.5.4"
+    "eslint-plugin-jest": "29.15.2",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-playwright": "2.10.1",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "get-tsconfig": "4.13.7",
+    "semver": "7.7.4"
   },
   "peerDependencies": {
     "eslint": "^8.48.0"

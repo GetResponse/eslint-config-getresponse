@@ -1,4 +1,4 @@
-module.exports = {
+export = {
     plugins: ['jest'],
     env: {
         jest: true,

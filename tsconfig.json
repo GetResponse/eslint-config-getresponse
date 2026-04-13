@@ -1,0 +1,14 @@
+{
+    "extends": "@getresponse/tsconfig/configs/node-lts/tsconfig.cjs.json",
+    "compilerOptions": {
+        "emitDecoratorMetadata": false,
+        "module": "node16",
+        "moduleResolution": "node16",
+        "noUncheckedIndexedAccess": false,
+        "importHelpers": false,
+        "outDir": "dist",
+        "rootDir": "src"
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist"]
+}
