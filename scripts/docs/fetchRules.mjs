@@ -1,5 +1,19 @@
+async function fetchWithRetry(url, options = {}, retries = 2) {
+    try {
+        return await fetch(url, options);
+    } catch (err) {
+        if (retries === 0) {
+            throw err;
+        }
+        await new Promise((r) => setTimeout(r, 1000));
+        // eslint-disable-next-line no-console
+        console.log(`Retrying ${url}...`);
+        return await fetchWithRetry(url, options, retries - 1);
+    }
+}
+
 async function fetchAndParse(url, regexp, accumulator) {
-    const response = await fetch(url);
+    const response = await fetchWithRetry(url, { headers: { 'User-Agent': 'github-actions' } });
 
     if (!response.ok) {
         throw new Error(`Failed to resolve rules from: ${url}`);
@@ -8,10 +22,7 @@ async function fetchAndParse(url, regexp, accumulator) {
     const content = await response.text();
     const matches = content.matchAll(regexp);
 
-    return Array.from(matches).reduce(
-        (result, matchArray) => Object.assign(result, accumulator(matchArray)),
-        {},
-    );
+    return Array.from(matches).reduce((result, matchArray) => Object.assign(result, accumulator(matchArray)), {});
 }
 
 function fetchStandardRules() {
@@ -80,13 +91,12 @@ function fetchPlaywrightRules() {
 }
 
 export async function fetchRules() {
-    const data = await Promise.all([
-        fetchStandardRules(),
-        fetchReactRules(),
-        fetchTypeScriptRules(),
-        fetchJestRules(),
-        fetchPlaywrightRules(),
-    ]);
+    const data = [];
+    data.push(await fetchStandardRules());
+    data.push(await fetchReactRules());
+    data.push(await fetchTypeScriptRules());
+    data.push(await fetchJestRules());
+    data.push(await fetchPlaywrightRules());
 
     return data.reduce((all, current) => ({ ...all, ...current }), {});
 }
