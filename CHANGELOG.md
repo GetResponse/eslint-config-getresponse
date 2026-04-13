@@ -1,3 +1,10 @@
+## [9.0.1](https://github.com/getresponse/eslint-config-getresponse/compare/v9.0.0...v9.0.1) (2026-04-13)
+
+
+### Bug Fixes
+
+* fixx problem with docs build ([2aaad46](https://github.com/getresponse/eslint-config-getresponse/commit/2aaad46668c1d17e0107ae137843e00903a375e6))
+
 # [9.0.0](https://github.com/getresponse/eslint-config-getresponse/compare/v8.1.1...v9.0.0) (2026-04-13)
 
 
