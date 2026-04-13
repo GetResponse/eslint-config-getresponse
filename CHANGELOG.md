@@ -1,3 +1,10 @@
+## [9.0.2](https://github.com/GetResponse/eslint-config-getresponse/compare/v9.0.1...v9.0.2) (2026-04-13)
+
+
+### Bug Fixes
+
+* fix problem with npm publish ([50cb73a](https://github.com/GetResponse/eslint-config-getresponse/commit/50cb73a04f32eba989ea1ba0c186a74ce3d85505))
+
 ## [9.0.1](https://github.com/getresponse/eslint-config-getresponse/compare/v9.0.0...v9.0.1) (2026-04-13)
 
 
