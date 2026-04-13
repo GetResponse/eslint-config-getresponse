@@ -1,4 +1,4 @@
-module.exports = {
+export = {
     rules: {
         'array-bracket-newline': 'off',
         'array-bracket-spacing': 'warn',

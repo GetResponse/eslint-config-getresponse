@@ -6,7 +6,7 @@ import url from 'node:url';
 import { fetchRules } from './docs/fetchRules.mjs';
 
 const taskFetchRules = fetchRules();
-const ruleFinder = await getRuleFinder('index.cjs');
+const ruleFinder = await getRuleFinder('dist/index.js');
 
 const usedRules = ruleFinder.getCurrentRulesDetailed();
 const unusedRules = ruleFinder.getUnusedRules();

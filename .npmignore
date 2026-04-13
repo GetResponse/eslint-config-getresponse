@@ -1,4 +1,4 @@
 .editorconfig
 .eslintrc
 .travis.yml
-release.config.js
+release.config.cjs

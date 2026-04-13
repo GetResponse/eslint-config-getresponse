@@ -1,27 +1,44 @@
-const { buildDynamicConfig } = require('../dynamic-config/buildDynamicConfig.cjs');
+import { buildDynamicConfig } from '../dynamic-config/buildDynamicConfig';
 
 const config = buildDynamicConfig();
 
-const eslintConfig = {
+interface TypescriptEslintConfig {
+    plugins?: string[];
+    rules?: Record<string, unknown>;
+    overrides: Array<{
+        files: string[];
+        plugins: string[];
+        rules: Record<string, unknown>;
+    }>;
+}
+
+const eslintConfig: TypescriptEslintConfig = {
     overrides: [
         {
             files: ['**/*.ts', '**/*.tsx'],
-            plugins: ['@typescript-eslint'],
+            plugins: ['@typescript-eslint', '@stylistic'],
             rules: {
-                '@typescript-eslint/brace-style': 'off',
+                '@stylistic/member-delimiter-style': 'warn',
+                '@stylistic/type-annotation-spacing': 'warn',
+                'comma-spacing': 'off',
+                '@stylistic/comma-spacing': 'warn',
+                'func-call-spacing': 'off',
+                '@stylistic/function-call-spacing': 'warn',
+                indent: 'off',
+                '@stylistic/indent': ['warn', 4, { SwitchCase: 1 }],
+                'no-extra-semi': 'off',
+                '@stylistic/no-extra-semi': 'warn',
+                quotes: 'off',
+                '@stylistic/quotes': ['warn', 'single', { avoidEscape: true }],
+                semi: 'off',
+                '@stylistic/semi': ['warn', 'always'],
+                'space-before-function-paren': 'off',
+                '@stylistic/space-before-function-paren': ['warn', { anonymous: 'always', named: 'never' }],
                 camelcase: 'off',
-                '@typescript-eslint/comma-spacing': 'warn',
                 'default-param-last': 'off',
                 '@typescript-eslint/default-param-last': 'error',
                 '@typescript-eslint/explicit-function-return-type': 'off',
                 '@typescript-eslint/explicit-member-accessibility': 'off',
-                '@typescript-eslint/explicit-module-boundary-types': 'off',
-                'func-call-spacing': 'off',
-                '@typescript-eslint/func-call-spacing': 'warn',
-                indent: 'off',
-                '@typescript-eslint/indent': ['warn', 4, { SwitchCase: 1 }],
-                '@typescript-eslint/member-delimiter-style': 'warn',
-                '@typescript-eslint/member-naming': 'off',
                 '@typescript-eslint/member-ordering': 'off',
                 // TBD
                 '@typescript-eslint/naming-convention': 'off',
@@ -39,15 +56,11 @@ const eslintConfig = {
                     },
                 ],
                 '@typescript-eslint/no-extra-non-null-assertion': 'warn',
-                '@typescript-eslint/no-extra-parens': 'off',
-                'no-extra-semi': 'off',
-                '@typescript-eslint/no-extra-semi': 'warn',
                 '@typescript-eslint/no-extraneous-class': 'off',
                 '@typescript-eslint/no-magic-numbers': 'off',
                 '@typescript-eslint/no-misused-new': 'error',
                 '@typescript-eslint/no-non-null-asserted-optional-chain': 'warn',
                 '@typescript-eslint/no-non-null-assertion': 'off',
-                '@typescript-eslint/no-parameter-properties': 'off',
                 '@typescript-eslint/no-require-imports': 'warn',
                 '@typescript-eslint/no-this-alias': 'warn',
                 'no-unused-expressions': 'off',
@@ -78,20 +91,8 @@ const eslintConfig = {
                 '@typescript-eslint/no-useless-constructor': 'warn',
                 '@typescript-eslint/no-var-requires': 'off',
                 '@typescript-eslint/prefer-function-type': 'off',
-                quotes: 'off',
-                '@typescript-eslint/quotes': [
-                    'warn',
-                    'single',
-                    {
-                        avoidEscape: true,
-                    },
-                ],
                 '@typescript-eslint/require-array-sort-compare': 'off',
-                semi: 'off',
-                '@typescript-eslint/semi': ['warn', 'always'],
-                'space-before-function-paren': 'off',
-                '@typescript-eslint/space-before-function-paren': ['warn', { anonymous: 'always', named: 'never' }],
-                '@typescript-eslint/strict-boolean-expressions': config.typescript?.config.strictNullChecks ? 'warn' : 'off',
+                '@typescript-eslint/strict-boolean-expressions': config.typescript?.config?.strictNullChecks ? 'warn' : 'off',
                 '@typescript-eslint/switch-exhaustiveness-check': 'off',
                 'no-redeclare': 'off',
                 '@typescript-eslint/no-redeclare': 'error',
@@ -108,24 +109,11 @@ const eslintConfig = {
                 '@typescript-eslint/adjacent-overload-signatures': 'warn',
                 '@typescript-eslint/await-thenable': 'off',
                 '@typescript-eslint/ban-ts-comment': 'warn',
-                '@typescript-eslint/ban-types': [
-                    'warn',
-                    {
-                        extendDefaults: true,
-                        types: {
-                            object: false,
-                        },
-                    },
-                ],
                 '@typescript-eslint/consistent-type-assertions': ['warn', {
                     assertionStyle: 'as',
                 }],
                 // TBD
                 '@typescript-eslint/consistent-type-definitions': 'off',
-                '@typescript-eslint/generic-type-naming': 'off',
-                // TBD
-                '@typescript-eslint/interface-name-prefix': 'off',
-                '@typescript-eslint/no-empty-interface': 'off',
                 '@typescript-eslint/no-floating-promises': 'off',
                 '@typescript-eslint/no-for-in-array': 'error',
                 '@typescript-eslint/no-implied-eval': 'error',
@@ -140,7 +128,7 @@ const eslintConfig = {
                 }],
                 '@typescript-eslint/no-namespace': 'off',
                 'no-throw-literal': 'off',
-                '@typescript-eslint/no-throw-literal': 'warn',
+                '@typescript-eslint/only-throw-error': 'warn',
                 '@typescript-eslint/no-type-alias': 'off',
                 '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'off',
                 '@typescript-eslint/no-unnecessary-condition': 'off',
@@ -148,7 +136,6 @@ const eslintConfig = {
                 '@typescript-eslint/no-unnecessary-type-arguments': 'warn',
                 // https://github.com/typescript-eslint/typescript-eslint/issues/2248
                 '@typescript-eslint/no-unnecessary-type-assertion': 'off',
-                '@typescript-eslint/no-unused-vars-experimental': 'off',
                 '@typescript-eslint/prefer-as-const': 'warn',
                 '@typescript-eslint/prefer-for-of': 'warn',
                 '@typescript-eslint/prefer-includes': 'warn',
@@ -168,7 +155,6 @@ const eslintConfig = {
                 // disabled due to false positive
                 '@typescript-eslint/return-await': 'off',
                 '@typescript-eslint/triple-slash-reference': 'error',
-                '@typescript-eslint/type-annotation-spacing': 'warn',
                 '@typescript-eslint/typedef': config.typescript?.config?.noImplicitAny ? 'off' : ['warn', {
                     arrayDestructuring: false,
                     arrowParameter: false,
@@ -198,4 +184,4 @@ if (config.shouldIncludeAll) {
     eslintConfig.rules = eslintConfig.overrides[0].rules;
 }
 
-module.exports = eslintConfig;
+export = eslintConfig;

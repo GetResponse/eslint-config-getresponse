@@ -1,10 +1,10 @@
-const { buildDynamicConfig } = require('../dynamic-config/buildDynamicConfig.cjs');
-const { PlaywrightConfig } = require('../dynamic-config/files.cjs');
+import { buildDynamicConfig } from '../dynamic-config/buildDynamicConfig';
+import { getPlaywrightConfig } from '../dynamic-config/files';
 
 const config = buildDynamicConfig();
 
-function getFromPattern(pattern, cfg) {
-    if (cfg === null) { return null; }
+function getFromPattern(pattern: RegExp, cfg: string | null): string | string[] | null {
+    if (!cfg) { return null; }
     const match = cfg.match(pattern);
 
     if (!match || match.length < 2) { return null; }
@@ -30,31 +30,43 @@ function getFromPattern(pattern, cfg) {
     return null;
 }
 
-function getDir(cfg) {
+function getDir(cfg: string | null): string {
     return cfg?.match(/testDir:\s*['"]([^'"]+)['"]/m)?.[1] ?? 'e2e';
 }
 
-function getMatchPattern(cfg) {
+function getMatchPattern(cfg: string | null): string | string[] {
     return getFromPattern(/testMatch:\s*(\/.*\/[gimsuy]*|['"][^'"]+['"]|\[[^\]]+])/m, cfg) ?? '**/*.@(spec|test).?(c|m)[jt]s?(x)';
 }
 
-function getIgnorePattern(cfg) {
+function getIgnorePattern(cfg: string | null): string | string[] {
     return getFromPattern(/testIgnore:\s*(\/.*\/[gimsuy]*|['"][^'"]+['"]|\[[^\]]+])/m, cfg) ?? '**/test-assets/**';
 }
 
-function getIncludeFiles() {
-    const dir = getDir(PlaywrightConfig);
-    const files = getMatchPattern(PlaywrightConfig);
+function getIncludeFiles(): string[] {
+    const playwrightConfig = getPlaywrightConfig();
+    const dir = getDir(playwrightConfig);
+    const files = getMatchPattern(playwrightConfig);
 
     return (Array.isArray(files) ? files : [files]).map(f => `${dir.endsWith('/') ? dir : `${dir}/`}${f}`);
 }
 
-function getExcludedFiles() {
-    const files = getIgnorePattern(PlaywrightConfig);
+function getExcludedFiles(): string[] {
+    const files = getIgnorePattern(getPlaywrightConfig());
     return Array.isArray(files) ? files : [files];
 }
 
-const playwrightConfig = {
+interface PlaywrightConfig {
+    plugins?: string[];
+    rules?: Record<string, unknown>;
+    overrides: Array<{
+        files: string[];
+        excludedFiles: string[];
+        plugins: string[];
+        rules: Record<string, unknown>;
+    }>;
+}
+
+const playwrightConfig: PlaywrightConfig = {
     overrides: [
         {
             files: getIncludeFiles(),
@@ -118,4 +130,4 @@ if (config.shouldIncludeAll) {
     playwrightConfig.rules = playwrightConfig.overrides[0].rules;
 }
 
-module.exports = playwrightConfig;
+export = playwrightConfig;

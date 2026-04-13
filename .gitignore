@@ -114,3 +114,5 @@ Temporary Items
 
 .idea/
 public/
+dist/
+tsconfig.tsbuildinfo
