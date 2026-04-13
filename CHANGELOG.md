@@ -1,3 +1,30 @@
+# [9.0.0](https://github.com/getresponse/eslint-config-getresponse/compare/v8.1.1...v9.0.0) (2026-04-13)
+
+
+### Features
+
+* migrate to TypeScript and upgrade [@typescript-eslint](https://github.com/typescript-eslint) to v8 ([c92baf4](https://github.com/getresponse/eslint-config-getresponse/commit/c92baf4a95aea13ef6e972d8510a1773cdd9d1b2))
+
+
+### BREAKING CHANGES
+
+* @typescript-eslint v8 requires all linted .ts/.tsx files
+  to be included in tsconfig.json. Files outside the project will cause errors
+  when type-aware rules are active.
+* removed rules dropped in @typescript-eslint v8
+  (brace-style, comma-spacing, func-call-spacing, indent, no-extra-parens,
+  no-extra-semi, quotes, semi, space-before-function-paren, ban-types,
+  no-empty-interface). Replaced TypeScript-specific formatting rules with
+  @stylistic/eslint-plugin equivalents.
+* renamed @typescript-eslint/no-throw-literal to
+  @typescript-eslint/only-throw-error.
+
+  - convert all source files from CommonJS to TypeScript
+  - add @stylistic/eslint-plugin for TypeScript-aware formatting rules
+  - fix semver.coerce crash on null (catalog:, workspace:* protocols)
+  - add fallback to node_modules for unresolvable version protocols
+  - update GitHub Actions to v4
+
 ## [8.1.1](https://github.com/getresponse/eslint-config-getresponse/compare/v8.1.0...v8.1.1) (2024-09-13)
 
 
