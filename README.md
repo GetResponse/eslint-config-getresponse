@@ -7,57 +7,85 @@
 
 ---
 
-An opinionated ESLint ruleset targeting TypeScript + React web apps
+An opinionated ESLint ruleset targeting TypeScript + React web apps.
 
 ## Requirements
 
-- ESLint `^8.48.0`
+- ESLint `^9.0.0`
+- Node `>=18.18`
 
 ## Installation
 
-1. Install `eslint` and `@getresponse/eslint-config`:
+```bash
+npm i -D eslint @getresponse/eslint-config
+```
 
-   ```bash
-   npm i -D eslint @getresponse/eslint-config
-   ```
+## Usage
 
-2. Add `"extends": "@getresponse/eslint-config"` to your ESLint [configuration file](https://eslint.org/docs/latest/user-guide/configuring/configuration-files)
+Create `eslint.config.js` in your project root:
+
+```js
+import config from '@getresponse/eslint-config';
+
+export default config;
+```
+
+With local overrides:
+
+```js
+import { defineConfig } from 'eslint/config';
+import config from '@getresponse/eslint-config';
+
+export default defineConfig(
+    config,
+    {
+        files: ['src/legacy/**/*.ts'],
+        rules: {
+            '@typescript-eslint/no-explicit-any': 'off',
+        },
+    },
+);
+```
 
 ## TypeScript project files
 
-Since `@typescript-eslint` v8, all linted `.ts`/`.tsx` files must be included in your `tsconfig.json`. Files outside the project will cause an error when type-aware rules are active. Make sure your `tsconfig.json` (or a dedicated `tsconfig.eslint.json`) covers all files you want to lint:
+Rules requiring type information use `projectService` (auto-discovery). The package automatically:
+
+- finds the nearest `tsconfig.json` for each linted file,
+- uses `tsconfig.eslint.json` (if present in the project root) as fallback for files outside any project — typical for config files, scripts, and tests.
+
+If you have files outside `src/` you want linted, point them at a dedicated `tsconfig.eslint.json`:
 
 ```json
 {
-  "include": ["src/**/*", "tests/**/*"]
+    "extends": "./tsconfig.json",
+    "include": ["src/**/*", "tests/**/*", "scripts/**/*"]
 }
 ```
 
 ## Dynamic rules
 
-Rules for the following tools are enabled automatically when the corresponding package is detected in your `package.json`:
+Plugin rulesets are enabled automatically when the corresponding package is detected in your `package.json`:
 
 - `typescript`
-- `react`
+- `react` (+ `react-hooks`)
 - `jest`
 - `@playwright/test` / `playwright`
 
 ## Mixins
 
-Additional opt-in rulesets are available:
+Additional opt-in rulesets:
 
 ```js
-// .eslintrc.js
-module.exports = {
-    extends: [
-        '@getresponse/eslint-config',
-        '@getresponse/eslint-config/mixins/a11y',
-    ],
-};
+import { defineConfig } from 'eslint/config';
+import config from '@getresponse/eslint-config';
+import a11y from '@getresponse/eslint-config/mixins/a11y';
+
+export default defineConfig(config, a11y);
 ```
 
-| Mixin | Description |
-|---|---|
+| Mixin                                    | Description |
+|------------------------------------------|---|
 | `@getresponse/eslint-config/mixins/a11y` | Accessibility rules via `eslint-plugin-jsx-a11y` |
 
 ## Rules list

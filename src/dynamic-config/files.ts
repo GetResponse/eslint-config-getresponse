@@ -15,6 +15,12 @@ export const getGitIgnorePath = once((): string | null => {
     return found ? dirname(found) : null;
 });
 
+export const getGitIgnoreFile = once((): string | null => lookupFile(cwd, '.gitignore'));
+
+export const getCustomTsconfigPath = once(
+    (): string | null => process.env['ESLINT_CUSTOM_TSCONFIG_PATH'] ?? lookupFile(cwd, 'tsconfig.eslint.json'),
+);
+
 export const getPlaywrightConfig = once((): string | null => {
     const found = lookupFile(cwd, 'playwright.config.ts', 'playwright.config.js', 'playwright.config.mts', 'playwright.config.mjs');
     return found ? readFileSync(found, 'utf-8') : null;

@@ -1,27 +1,18 @@
-export = {
-    env: {
-        es6: true,
-    },
-    parserOptions: {
-        ecmaVersion: 11,
-        sourceType: 'module',
-        ecmaFeatures: {
-            generators: false,
-            objectLiteralDuplicateProperties: false,
-        },
-    },
+import { defineConfig } from 'eslint/config';
+
+export = defineConfig({
     rules: {
         'arrow-body-style': ['warn', 'as-needed'],
-        'arrow-parens': 'off',
-        'arrow-spacing': 'warn',
+        '@stylistic/arrow-parens': 'off',
+        '@stylistic/arrow-spacing': 'warn',
         'constructor-super': 'error',
-        'generator-star-spacing': 'off',
+        '@stylistic/generator-star-spacing': 'off',
         'no-class-assign': 'error',
-        'no-confusing-arrow': 'off',
+        '@stylistic/no-confusing-arrow': 'off',
         'no-const-assign': 'error',
         'no-dupe-class-members': 'error',
         'no-duplicate-imports': 'error',
-        'no-new-symbol': 'error',
+        'no-new-native-nonconstructor': 'error',
         'no-restricted-exports': 'off',
         'no-restricted-imports': 'off',
         'no-this-before-super': 'error',
@@ -50,11 +41,11 @@ export = {
         'prefer-spread': 'warn',
         'prefer-template': 'warn',
         'require-yield': 'off',
-        'rest-spread-spacing': 'warn',
+        '@stylistic/rest-spread-spacing': 'warn',
         'sort-imports': 'off',
         'symbol-description': 'off',
-        'template-curly-spacing': 'warn',
-        'yield-star-spacing': 'off',
+        '@stylistic/template-curly-spacing': 'warn',
+        '@stylistic/yield-star-spacing': 'off',
         'prefer-object-has-own': 'warn',
     },
-};
+});

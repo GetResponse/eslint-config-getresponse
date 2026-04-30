@@ -1,7 +1,14 @@
-export = {
-    plugins: ['jest'],
-    env: {
-        jest: true,
+import { type Plugin } from '@eslint/core';
+import { defineConfig } from 'eslint/config';
+import jest from 'eslint-plugin-jest';
+import globals from 'globals';
+
+export = defineConfig({
+    plugins: {
+        jest: jest as Plugin,
+    },
+    languageOptions: {
+        globals: { ...globals.jest },
     },
     rules: {
         'jest/consistent-test-it': [
@@ -29,7 +36,6 @@ export = {
         'jest/no-focused-tests': 'warn',
         'jest/no-hooks': 'off',
         'jest/no-identical-title': 'error',
-        'jest/no-if': 'warn',
         'jest/no-interpolation-in-snapshots': 'off',
         'jest/no-jasmine-globals': 'error',
         'jest/no-large-snapshots': 'off',
@@ -61,4 +67,4 @@ export = {
         'jest/valid-expect-in-promise': 'error',
         'jest/valid-title': 'warn',
     },
-};
+});

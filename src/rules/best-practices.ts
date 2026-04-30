@@ -1,4 +1,6 @@
-export = {
+import { defineConfig } from 'eslint/config';
+
+export = defineConfig({
     rules: {
         'accessor-pairs': 'error',
         'array-callback-return': 'error',
@@ -10,7 +12,7 @@ export = {
         'default-case': 'off',
         'default-case-last': 'off',
         'default-param-last': 'error',
-        'dot-location': ['warn', 'property'],
+        '@stylistic/dot-location': ['warn', 'property'],
         'dot-notation': 'off',
         eqeqeq: 'warn',
         'guard-for-in': 'warn',
@@ -31,20 +33,18 @@ export = {
         'no-extra-bind': 'warn',
         'no-extra-label': 'off',
         'no-fallthrough': 'off',
-        'no-floating-decimal': 'warn',
+        '@stylistic/no-floating-decimal': 'warn',
         'no-global-assign': 'error',
         'no-implicit-coercion': 'off',
         'no-implicit-globals': 'off',
         'no-implied-eval': 'error',
-        // no-invalid-this should be enabled when configurable for class properties
-        // https://github.com/typescript-eslint/typescript-eslint/issues/491
         'no-invalid-this': 'off',
         'no-iterator': 'error',
         'no-labels': 'error',
         'no-lone-blocks': 'error',
         'no-loop-func': 'error',
         'no-magic-numbers': 'off',
-        'no-multi-spaces': 'warn',
+        '@stylistic/no-multi-spaces': 'warn',
         'no-multi-str': 'off',
         'no-new': 'off',
         'no-new-func': 'error',
@@ -57,7 +57,6 @@ export = {
         'no-redeclare': 'warn',
         'no-restricted-properties': 'off',
         'no-return-assign': 'off',
-        'no-return-await': 'off',
         'no-script-url': 'error',
         'no-self-assign': 'warn',
         'no-self-compare': 'error',
@@ -82,7 +81,7 @@ export = {
         radix: 'off',
         'require-await': 'off',
         'vars-on-top': 'warn',
-        'wrap-iife': 'warn',
+        '@stylistic/wrap-iife': 'warn',
         yoda: 'warn',
     },
-};
+});
