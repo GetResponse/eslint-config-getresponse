@@ -1,11 +1,8 @@
-export = {
-    rules: {
-        // Enforce "for" loop update clause moving the counter in the right direction
-        // http://eslint.org/docs/rules/for-direction
-        'for-direction': 'error',
+import { defineConfig } from 'eslint/config';
 
-        // Enforces that a return statement is present in property getters
-        // http://eslint.org/docs/rules/getter-return
+export = defineConfig({
+    rules: {
+        'for-direction': 'error',
         'getter-return': ['error', { allowImplicit: true }],
         'no-await-in-loop': 'warn',
         'no-compare-neg-zero': 'error',
@@ -22,8 +19,8 @@ export = {
         'no-empty-character-class': 'warn',
         'no-ex-assign': 'error',
         'no-extra-boolean-cast': 'warn',
-        'no-extra-parens': 'off',
-        'no-extra-semi': 'error',
+        '@stylistic/no-extra-parens': 'off',
+        '@stylistic/no-extra-semi': 'error',
         'no-func-assign': 'error',
         'no-import-assign': 'error',
         'no-inner-declarations': 'error',
@@ -51,4 +48,4 @@ export = {
         'no-unused-private-class-members': 'warn',
         'no-constant-binary-expression': 'error',
     },
-};
+});

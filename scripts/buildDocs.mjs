@@ -1,49 +1,24 @@
-import getRuleFinder from 'eslint-find-rules';
-import pug from 'pug';
-import fs from 'node:fs';
-import path from 'node:path';
-import url from 'node:url';
-import { fetchRules } from './docs/fetchRules.mjs';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
+import { collectRules } from './docs/collectRules.mjs';
+import { classifyRules } from './docs/classifyRules.mjs';
+import { renderHtml } from './docs/renderHtml.mjs';
 
-const taskFetchRules = fetchRules();
-const ruleFinder = await getRuleFinder('dist/index.js');
+// Force the dynamic config to include every plugin (jest/react/playwright/etc.)
+// regardless of what's installed in this repo. The flag is read by
+// dist/dynamic-config/buildDynamicConfig.ts.
+process.env.DOCS_MODE = '1';
 
-const usedRules = ruleFinder.getCurrentRulesDetailed();
-const unusedRules = ruleFinder.getUnusedRules();
-const usedDeprecatedRules = ruleFinder.getDeprecatedRules()
-    .filter(rule => rule in usedRules);
+const repoRoot = resolve(import.meta.dirname, '..');
 
-const rulesMetadata = await taskFetchRules;
+const collected = await collectRules(repoRoot);
+const classified = classifyRules(collected);
+const html = renderHtml(classified);
 
-const htmlContent = pug.renderFile(path.join(url.fileURLToPath(new URL('.', import.meta.url)), 'docs', 'docs-template.pug'), {
-    deprecated: usedDeprecatedRules.map(
-        rule => ({
-            name: rule,
-            description: rulesMetadata[rule]?.description,
-            url: rulesMetadata[rule]?.url,
-        }),
-    ),
-    enabled: Object.entries(usedRules).map(([rule, [status, config]]) => ({
-        name: rule,
-        status,
-        config,
-        description: rulesMetadata[rule]?.description,
-        url: rulesMetadata[rule]?.url,
-    })),
-    unused: unusedRules.map(
-        rule => ({
-            name: rule,
-            description: rulesMetadata[rule]?.description,
-            url: rulesMetadata[rule]?.url,
-        }),
-    ),
-});
+const destDir = join(repoRoot, 'public');
+mkdirSync(destDir, { recursive: true });
+writeFileSync(join(destDir, 'index.html'), html);
 
-const destDir = path.join(process.cwd(), 'public');
-const destFile = path.join(destDir, 'index.html');
-
-if (!fs.existsSync(destDir)) {
-    fs.mkdirSync(destDir);
-}
-
-fs.writeFileSync(destFile, htmlContent);
+const { enabled, deprecated, unused } = classified;
+// eslint-disable-next-line no-console
+console.log(`Generated public/index.html — ${enabled.length} enabled, ${deprecated.length} deprecated, ${unused.length} unused`);

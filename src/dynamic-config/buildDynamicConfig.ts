@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import semver from 'semver';
 import { getTsconfig } from 'get-tsconfig';
-import { getPackageJson } from './files';
+import { getPackageJson, getCustomTsconfigPath } from './files';
 import { lookupFile } from './lookupFile';
 import { once } from './once';
 
@@ -22,6 +22,7 @@ export interface DynamicConfig {
     esm: boolean;
     playwright: string | null;
     shouldIncludeAll: boolean;
+    tsconfigPath: string | null;
 }
 
 function getInstalledVersion(name: string, cwd: string = process.cwd()): string | null {
@@ -78,5 +79,6 @@ export const buildDynamicConfig = once((): DynamicConfig => {
         esm: packageJson?.['type'] === 'module',
         playwright: dep('@playwright/test') ?? dep('playwright'),
         shouldIncludeAll: process.env['DOCS_MODE'] === '1',
+        tsconfigPath: getCustomTsconfigPath(),
     };
 });
