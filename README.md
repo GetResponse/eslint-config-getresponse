@@ -49,19 +49,33 @@ export default defineConfig(
 
 ## TypeScript project files
 
-Rules requiring type information use `projectService` (auto-discovery). The package automatically:
+Rules requiring type information use `parserOptions.project`. The package picks the tsconfig in this order:
 
-- finds the nearest `tsconfig.json` for each linted file,
-- uses `tsconfig.eslint.json` (if present in the project root) as fallback for files outside any project — typical for config files, scripts, and tests.
+1. `tsconfig.eslint.json` in the project root (preferred), or
+2. `tsconfig.json` (fallback).
 
-If you have files outside `src/` you want linted, point them at a dedicated `tsconfig.eslint.json`:
+The picked tsconfig's `include`/`exclude`/`files` are honored as-is — every file matched by ESLint must also be covered by the tsconfig's `include` (and not by `exclude`), otherwise typescript-eslint will throw a parsing error.
+
+If you have files outside `src/` you want linted (config files, scripts, tests excluded from the build tsconfig, etc.), create a dedicated `tsconfig.eslint.json`:
 
 ```json
 {
     "extends": "./tsconfig.json",
-    "include": ["src/**/*", "tests/**/*", "scripts/**/*"]
+    "include": [
+        "src/**/*",
+        "tests/**/*",
+        "scripts/**/*",
+        "*.config.ts",
+        "*.config.js"
+    ],
+    "exclude": []
 }
 ```
+
+Notes:
+- If your build `tsconfig.json` excludes test files (`"exclude": ["**/*.test.ts"]`), override it with `"exclude": []` in `tsconfig.eslint.json` so tests are linted.
+- All matched files share a single TypeScript Program — efficient for small/medium projects. For large monorepos with project references, consider switching to `projectService` via a local override (see typescript-eslint docs).
+- You can override the picked tsconfig path globally via the `ESLINT_CUSTOM_TSCONFIG_PATH` env var.
 
 ## Dynamic rules
 

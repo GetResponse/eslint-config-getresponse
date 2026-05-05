@@ -11,9 +11,7 @@ export = defineConfig({
     languageOptions: {
         parser: tseslint.parser,
         parserOptions: {
-            projectService: {
-                defaultProject: dynamicConfig.tsconfigPath ?? 'tsconfig.json',
-            },
+            project: dynamicConfig.tsconfigPath ?? 'tsconfig.json',
             tsconfigRootDir: process.cwd(),
             ecmaVersion: 2022,
             sourceType: 'module',
