@@ -1,3 +1,36 @@
+# [10.0.0](https://github.com/GetResponse/eslint-config-getresponse/compare/v9.0.2...v10.0.0) (2026-05-05)
+
+
+### Features
+
+* migrate to ESLint flat config and bump peer dep to ESLint 9/10 ([ab88fd4](https://github.com/GetResponse/eslint-config-getresponse/commit/ab88fd4fa7d1cf418f8dcee6286e4c1c1edf0eb4))
+
+
+### BREAKING CHANGES
+
+* Drops legacy .eslintrc-style config in favor of flat
+config (eslint.config.ts). The `extends` entry point is removed —
+consumers must import the default export from
+`eslint-config-getresponse` and spread it into their `eslint.config.*`
+file. Peer dependency now requires ESLint ^9 || ^10.
+
+- Replace eslintrc shape with `defineConfig`-based flat config in
+  src/index.ts and per-rule modules under src/rules/*
+- Drop @rushstack/eslint-patch, eslint-gitignore, eslint-find-rules,
+  cross-env, pug; switch gitignore handling to @eslint/compat
+  `includeIgnoreFile`
+- Bump @stylistic/eslint-plugin to v5, eslint-plugin-react-hooks to
+  7.1.1, adopt `typescript-eslint` v8 unified package, add `globals`
+  and `jiti` for TS config loading
+- Remove obsolete src/rules/node.ts (rules merged elsewhere / handled
+  by ESLint core)
+- Add package.json `exports` `types` conditions and `overrides` to
+  pin downstream plugins to the host eslint version
+- Rewrite scripts/buildDocs.mjs without pug template; split into
+  scripts/docs/{collectRules,classifyRules,renderHtml}.mjs modules
+- Add src/types/plugins.d.ts shims and update tsconfig accordingly
+- Update README to document flat-config consumption
+
 ## [9.0.2](https://github.com/GetResponse/eslint-config-getresponse/compare/v9.0.1...v9.0.2) (2026-04-13)
 
 
