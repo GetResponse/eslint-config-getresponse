@@ -1,3 +1,10 @@
+## [10.0.1](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.0.0...v10.0.1) (2026-05-05)
+
+
+### Bug Fixes
+
+* improve handling of tsconfig for type-aware rules ([2ec5484](https://github.com/GetResponse/eslint-config-getresponse/commit/2ec5484096e1b4f7090e93726cd51d82fabcd67a))
+
 # [10.0.0](https://github.com/GetResponse/eslint-config-getresponse/compare/v9.0.2...v10.0.0) (2026-05-05)
 
 
