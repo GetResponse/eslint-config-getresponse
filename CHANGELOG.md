@@ -1,3 +1,10 @@
+## [10.0.2](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.0.1...v10.0.2) (2026-05-06)
+
+
+### Bug Fixes
+
+* apply fixupPluginRules to react and react-hooks plugins for compatibility with @eslint/compat ([58d677d](https://github.com/GetResponse/eslint-config-getresponse/commit/58d677d9dcf1668d4e7860b1cfaa16aa67d06efe))
+
 ## [10.0.1](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.0.0...v10.0.1) (2026-05-05)
 
 
