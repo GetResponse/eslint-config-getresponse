@@ -1,4 +1,5 @@
 import { type Plugin } from '@eslint/core';
+import { fixupPluginRules } from '@eslint/compat';
 import { defineConfig } from 'eslint/config';
 import semver from 'semver';
 import react from 'eslint-plugin-react';
@@ -10,8 +11,8 @@ const dynamicConfig = buildDynamicConfig();
 export = defineConfig(
     {
         plugins: {
-            react,
-            'react-hooks': reactHooks as Plugin,
+            react: fixupPluginRules(react),
+            'react-hooks': fixupPluginRules(reactHooks as Plugin),
         },
         settings: {
             react: {
