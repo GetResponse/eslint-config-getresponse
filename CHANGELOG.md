@@ -1,3 +1,10 @@
+# [10.1.0](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.0.2...v10.1.0) (2026-05-07)
+
+
+### Features
+
+* add Vue 3 ruleset and expose presets for explicit composition ([4bf4dd5](https://github.com/GetResponse/eslint-config-getresponse/commit/4bf4dd525cdfd0746f3c77143a5d21aca8d718ce))
+
 ## [10.0.2](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.0.1...v10.0.2) (2026-05-06)
 
 
