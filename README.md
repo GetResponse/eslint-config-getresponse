@@ -7,7 +7,7 @@
 
 ---
 
-An opinionated ESLint ruleset targeting TypeScript + React web apps.
+An opinionated ESLint ruleset targeting TypeScript + React/Vue web apps.
 
 ## Requirements
 
