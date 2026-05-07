@@ -1,3 +1,10 @@
+## [10.1.1](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.1.0...v10.1.1) (2026-05-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependences and mention Vue support in README ([07da64d](https://github.com/GetResponse/eslint-config-getresponse/commit/07da64d86fd5e91980f83b02006509d746ee90c9))
+
 # [10.1.0](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.0.2...v10.1.0) (2026-05-07)
 
 
