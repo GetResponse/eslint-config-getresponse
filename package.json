@@ -75,7 +75,8 @@
     "globals": "17.6.0",
     "jiti": "2.6.1",
     "semver": "7.7.4",
-    "typescript-eslint": "8.59.1"
+    "typescript-eslint": "8.59.1",
+    "vue-eslint-parser": "10.4.0"
   },
   "peerDependencies": {
     "eslint": "^9.0.0 || ^10.0.0"
