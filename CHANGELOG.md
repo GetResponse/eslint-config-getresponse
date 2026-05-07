@@ -1,3 +1,10 @@
+## [10.1.2](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.1.1...v10.1.2) (2026-05-07)
+
+
+### Bug Fixes
+
+* add vue-eslint-parser dependency for Vue 3 support ([387ea45](https://github.com/GetResponse/eslint-config-getresponse/commit/387ea454dd67e07ad88ec185ef19342a0d53d68b))
+
 ## [10.1.1](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.1.0...v10.1.1) (2026-05-07)
 
 
