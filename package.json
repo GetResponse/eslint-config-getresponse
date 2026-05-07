@@ -70,6 +70,7 @@
     "eslint-plugin-playwright": "2.10.1",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-vue": "10.5.0",
     "get-tsconfig": "4.13.7",
     "globals": "17.5.0",
     "jiti": "2.6.1",
@@ -84,6 +85,9 @@
       "eslint": "$eslint"
     },
     "eslint-plugin-react": {
+      "eslint": "$eslint"
+    },
+    "eslint-plugin-vue": {
       "eslint": "$eslint"
     }
   }

@@ -83,12 +83,38 @@ Plugin rulesets are enabled automatically when the corresponding package is dete
 
 - `typescript`
 - `react` (+ `react-hooks`)
+- `vue`
 - `jest`
 - `@playwright/test` / `playwright`
 
+## Presets
+
+Every ruleset that ships with the package is also exposed via `config.presets`, so you can compose them explicitly (e.g. apply Vue rules in a project where `vue` isn't in `package.json`, or override ordering):
+
+```js
+import { defineConfig } from 'eslint/config';
+import config from '@getresponse/eslint-config';
+
+export default defineConfig(config, config.presets.vue);
+```
+
+Available entries on `config.presets`:
+
+| Name | Description |
+|---|---|
+| `bestPractices`, `errors`, `es6`, `style`, `variables` | Core rule groups (always on in the default config) |
+| `typescript` | TypeScript rules (auto-loaded when `typescript` is in `package.json`) |
+| `react` | React + react-hooks (auto-loaded when `react` is in `package.json`) |
+| `vue` | Vue 3 strongly-recommended (auto-loaded when `vue` is in `package.json`) |
+| `jest` | Jest rules (auto-loaded when `jest` is in `package.json`) |
+| `playwright` | Playwright rules (auto-loaded when `@playwright/test` / `playwright` is in `package.json`) |
+| `a11y` | Accessibility rules via `eslint-plugin-jsx-a11y` (opt-in only) |
+
+If the corresponding package is already in your `package.json`, the rules are loaded automatically — you only need `config.presets.X` for explicit composition or for a11y (which is never auto-loaded).
+
 ## Mixins
 
-Additional opt-in rulesets:
+Additional opt-in rulesets — equivalent to `config.presets.a11y` above, kept for backward compatibility:
 
 ```js
 import { defineConfig } from 'eslint/config';

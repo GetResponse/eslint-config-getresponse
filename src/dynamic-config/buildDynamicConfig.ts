@@ -17,6 +17,7 @@ export interface TypeScriptConfig {
 
 export interface DynamicConfig {
     react: string | null;
+    vue: string | null;
     typescript: TypeScriptConfig | null;
     jest: string | null;
     esm: boolean;
@@ -74,6 +75,7 @@ export const buildDynamicConfig = once((): DynamicConfig => {
 
     return {
         react: dep('react'),
+        vue: dep('vue'),
         typescript: tsVersion ? { version: tsVersion, config: getTsOptions() } : null,
         jest: dep('jest'),
         esm: packageJson?.['type'] === 'module',

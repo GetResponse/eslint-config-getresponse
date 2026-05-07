@@ -10,6 +10,7 @@ const dynamicConfig = buildDynamicConfig();
 
 export = defineConfig(
     {
+        files: ['**/*.js', '**/*.jsx', '**/*.mjs', '**/*.cjs', '**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.mdx'],
         plugins: {
             react: fixupPluginRules(react),
             'react-hooks': fixupPluginRules(reactHooks as Plugin),

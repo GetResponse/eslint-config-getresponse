@@ -11,7 +11,9 @@ import variables from './rules/variables';
 import jest from './rules/jest';
 import typescript from './rules/typescript';
 import react from './rules/react';
+import vue from './rules/vue';
 import playwright from './rules/playwright';
+import a11y from './mixins/a11y';
 import { buildDynamicConfig } from './dynamic-config/buildDynamicConfig';
 import { getGitIgnoreFile } from './dynamic-config/files';
 
@@ -48,8 +50,23 @@ const config = defineConfig(
     dynamicConfig.jest || dynamicConfig.shouldIncludeAll ? jest : [],
     dynamicConfig.typescript || dynamicConfig.shouldIncludeAll ? typescript : [],
     dynamicConfig.react || dynamicConfig.shouldIncludeAll ? react : [],
+    dynamicConfig.vue || dynamicConfig.shouldIncludeAll ? vue : [],
     dynamicConfig.playwright || dynamicConfig.shouldIncludeAll ? playwright : [],
     gitIgnoreFile ? includeIgnoreFile(gitIgnoreFile) : [],
 );
 
-export = config;
+export = Object.assign(config, {
+    presets: {
+        bestPractices,
+        errors,
+        es6,
+        style,
+        variables,
+        jest,
+        typescript,
+        react,
+        vue,
+        playwright,
+        a11y,
+    },
+});
