@@ -1,3 +1,10 @@
+# [10.2.0](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.1.2...v10.2.0) (2026-06-12)
+
+
+### Features
+
+* add rules replacing deprecated `ban-types` in TypeScript-eslint v8 ([bd0230e](https://github.com/GetResponse/eslint-config-getresponse/commit/bd0230e2252448f3ef1df86c6013d9ea0a9815b3))
+
 ## [10.1.2](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.1.1...v10.1.2) (2026-05-07)
 
 
