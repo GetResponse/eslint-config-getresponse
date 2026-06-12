@@ -94,6 +94,13 @@ export = defineConfig({
         '@typescript-eslint/adjacent-overload-signatures': 'warn',
         '@typescript-eslint/await-thenable': 'off',
         '@typescript-eslint/ban-ts-comment': 'warn',
+        // Replaces the deprecated `ban-types` rule (split in typescript-eslint v8):
+        // https://typescript-eslint.io/blog/revamping-the-ban-types-rule/
+        '@typescript-eslint/no-empty-object-type': 'error',
+        '@typescript-eslint/no-unsafe-function-type': 'error',
+        '@typescript-eslint/no-wrapper-object-types': 'error',
+        // `no-restricted-types` covers the old rule's custom-type banning; left off as no custom types are restricted here.
+        '@typescript-eslint/no-restricted-types': 'off',
         '@typescript-eslint/consistent-type-assertions': ['warn', { assertionStyle: 'as' }],
         '@typescript-eslint/consistent-type-definitions': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
