@@ -1,3 +1,10 @@
+## [10.2.1](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.2.0...v10.2.1) (2026-07-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies ([b7304ce](https://github.com/GetResponse/eslint-config-getresponse/commit/b7304ce922b93c60613e917a82c2417a1ca00850))
+
 # [10.2.0](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.1.2...v10.2.0) (2026-06-12)
 
 
