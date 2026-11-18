@@ -2,9 +2,6 @@ import { defineConfig } from 'eslint/config';
 
 export = defineConfig({
     rules: {
-        '@stylistic/array-bracket-newline': 'off',
-        '@stylistic/array-bracket-spacing': 'warn',
-        '@stylistic/array-element-newline': 'off',
         '@stylistic/block-spacing': 'warn',
         '@stylistic/brace-style': 'off',
         camelcase: 'warn',
@@ -31,8 +28,6 @@ export = defineConfig({
         'func-name-matching': 'warn',
         'func-names': 'warn',
         'func-style': 'off',
-        '@stylistic/function-call-argument-newline': ['warn', 'consistent'],
-        '@stylistic/function-paren-newline': 'off',
         'grouped-accessor-pairs': 'warn',
         'id-denylist': 'off',
         'id-length': 'off',
@@ -46,6 +41,7 @@ export = defineConfig({
         '@stylistic/linebreak-style': 'off',
         '@stylistic/lines-around-comment': 'off',
         '@stylistic/lines-between-class-members': ['warn', 'always', { exceptAfterSingleLine: true }],
+        '@stylistic/list-style': ['warn', { overrides: { CallExpression: 'off', NewExpression: 'off' } }],
         'max-depth': 'off',
         '@stylistic/max-len': ['warn', 140, 4],
         'max-lines': 'off',
@@ -79,9 +75,6 @@ export = defineConfig({
         'no-unneeded-ternary': 'warn',
         '@stylistic/no-whitespace-before-property': 'warn',
         '@stylistic/nonblock-statement-body-position': 'off',
-        '@stylistic/object-curly-newline': 'off',
-        '@stylistic/object-curly-spacing': ['warn', 'always'],
-        '@stylistic/object-property-newline': 'off',
         'one-var': ['warn', { var: 'always', let: 'never', const: 'never' }],
         '@stylistic/one-var-declaration-per-line': 'off',
         'operator-assignment': 'off',
