@@ -33,7 +33,7 @@
 
 
 <section class="active-rules">
-    <h1>Active rules (288)</h1>
+    <h1>Active rules (286)</h1>
     <table>
         <colgroup>
             <col class="col-rule">
@@ -44,13 +44,6 @@
             <tr><th>Rule</th><th>Status</th><th>Configuration</th></tr>
         </thead>
         <tbody>
-    <tr>
-        <td><a class="name" href="https://eslint.style/rules/array-bracket-spacing" target="_blank" rel="noopener">@stylistic/array-bracket-spacing</a> <span class="source">@stylistic</span><div class="desc">Enforce consistent spacing inside array brackets</div></td>
-        <td class="status warn">warn</td>
-        <td><pre>[
-  &quot;never&quot;
-]</pre></td>
-    </tr>
     <tr>
         <td><a class="name" href="https://eslint.style/rules/arrow-spacing" target="_blank" rel="noopener">@stylistic/arrow-spacing</a> <span class="source">@stylistic</span><div class="desc">Enforce consistent spacing before and after the arrow in arrow functions</div></td>
         <td class="status warn">warn</td>
@@ -126,13 +119,6 @@
 ]</pre></td>
     </tr>
     <tr>
-        <td><a class="name" href="https://eslint.style/rules/function-call-argument-newline" target="_blank" rel="noopener">@stylistic/function-call-argument-newline</a> <span class="source">@stylistic</span><div class="desc">Enforce line breaks between arguments of a function call</div></td>
-        <td class="status warn">warn</td>
-        <td><pre>[
-  &quot;consistent&quot;
-]</pre></td>
-    </tr>
-    <tr>
         <td><a class="name" href="https://eslint.style/rules/function-call-spacing" target="_blank" rel="noopener">@stylistic/function-call-spacing</a> <span class="source">@stylistic</span><div class="desc">Require or disallow spacing between function identifiers and their invocations</div></td>
         <td class="status warn">warn</td>
         <td><pre>[
@@ -146,8 +132,34 @@
   4,
   {
     &quot;SwitchCase&quot;: 1,
+    &quot;VariableDeclarator&quot;: 1,
+    &quot;outerIIFEBody&quot;: 1,
+    &quot;assignmentOperator&quot;: 1,
+    &quot;FunctionDeclaration&quot;: {
+      &quot;parameters&quot;: 1,
+      &quot;body&quot;: 1,
+      &quot;returnType&quot;: 1
+    },
+    &quot;FunctionExpression&quot;: {
+      &quot;parameters&quot;: 1,
+      &quot;body&quot;: 1,
+      &quot;returnType&quot;: 1
+    },
+    &quot;StaticBlock&quot;: {
+      &quot;body&quot;: 1
+    },
+    &quot;CallExpression&quot;: {
+      &quot;arguments&quot;: 1
+    },
+    &quot;MemberExpression&quot;: 1,
+    &quot;ArrayExpression&quot;: 1,
+    &quot;ObjectExpression&quot;: 1,
+    &quot;ImportDeclaration&quot;: 1,
     &quot;flatTernaryExpressions&quot;: false,
-    &quot;ignoredNodes&quot;: []
+    &quot;offsetTernaryExpressions&quot;: false,
+    &quot;ignoredNodes&quot;: [],
+    &quot;ignoreComments&quot;: false,
+    &quot;tabLength&quot;: 4
   }
 ]</pre></td>
     </tr>
@@ -184,6 +196,31 @@
   {
     &quot;exceptAfterOverload&quot;: true,
     &quot;exceptAfterSingleLine&quot;: true
+  }
+]</pre></td>
+    </tr>
+    <tr>
+        <td><a class="name" href="https://eslint.style/rules/list-style" target="_blank" rel="noopener">@stylistic/list-style</a> <span class="source">@stylistic</span><div class="desc">Enforce consistent spacing and line break styles inside brackets.</div></td>
+        <td class="status warn">warn</td>
+        <td><pre>[
+  {
+    &quot;empty&quot;: &quot;ignore&quot;,
+    &quot;singleLine&quot;: {
+      &quot;spacing&quot;: &quot;never&quot;,
+      &quot;maxItems&quot;: null
+    },
+    &quot;multiLine&quot;: {
+      &quot;minItems&quot;: 0
+    },
+    &quot;overrides&quot;: {
+      &quot;{}&quot;: {
+        &quot;singleLine&quot;: {
+          &quot;spacing&quot;: &quot;always&quot;
+        }
+      },
+      &quot;CallExpression&quot;: &quot;off&quot;,
+      &quot;NewExpression&quot;: &quot;off&quot;
+    }
   }
 ]</pre></td>
     </tr>
@@ -234,19 +271,13 @@
     <tr>
         <td><a class="name" href="https://eslint.style/rules/no-mixed-spaces-and-tabs" target="_blank" rel="noopener">@stylistic/no-mixed-spaces-and-tabs</a> <span class="source">@stylistic</span><div class="desc">Disallow mixed spaces and tabs for indentation</div></td>
         <td class="status warn">warn</td>
-        <td><pre>[
-  false
-]</pre></td>
+        <td><pre> - </pre></td>
     </tr>
     <tr>
         <td><a class="name" href="https://eslint.style/rules/no-multi-spaces" target="_blank" rel="noopener">@stylistic/no-multi-spaces</a> <span class="source">@stylistic</span><div class="desc">Disallow multiple spaces</div></td>
         <td class="status warn">warn</td>
         <td><pre>[
   {
-    &quot;exceptions&quot;: {
-      &quot;Property&quot;: true,
-      &quot;ImportAttribute&quot;: true
-    },
     &quot;ignoreEOLComments&quot;: false,
     &quot;includeTabs&quot;: true
   }
@@ -284,13 +315,6 @@
         <td><a class="name" href="https://eslint.style/rules/no-whitespace-before-property" target="_blank" rel="noopener">@stylistic/no-whitespace-before-property</a> <span class="source">@stylistic</span><div class="desc">Disallow whitespace before properties</div></td>
         <td class="status warn">warn</td>
         <td><pre> - </pre></td>
-    </tr>
-    <tr>
-        <td><a class="name" href="https://eslint.style/rules/object-curly-spacing" target="_blank" rel="noopener">@stylistic/object-curly-spacing</a> <span class="source">@stylistic</span><div class="desc">Enforce consistent spacing inside braces</div></td>
-        <td class="status warn">warn</td>
-        <td><pre>[
-  &quot;always&quot;
-]</pre></td>
     </tr>
     <tr>
         <td><a class="name" href="https://eslint.style/rules/padded-blocks" target="_blank" rel="noopener">@stylistic/padded-blocks</a> <span class="source">@stylistic</span><div class="desc">Require or disallow padding within blocks</div></td>
@@ -2001,12 +2025,15 @@
 </section>
 
 <section>
-    <h1>Unused rules (508)</h1>
+    <h1>Unused rules (509)</h1>
     <p class="summary">Rules available in the included plugins but not enabled by this config.</p>
     <table>
         <tbody>
     <tr>
         <td><a class="name" href="https://eslint.style/rules/array-bracket-newline" target="_blank" rel="noopener">@stylistic/array-bracket-newline</a> <span class="source">@stylistic</span><div class="desc">Enforce linebreaks after opening and before closing array brackets</div></td>
+    </tr>
+    <tr>
+        <td><a class="name" href="https://eslint.style/rules/array-bracket-spacing" target="_blank" rel="noopener">@stylistic/array-bracket-spacing</a> <span class="source">@stylistic</span><div class="desc">Enforce consistent spacing inside array brackets</div></td>
     </tr>
     <tr>
         <td><a class="name" href="https://eslint.style/rules/array-element-newline" target="_blank" rel="noopener">@stylistic/array-element-newline</a> <span class="source">@stylistic</span><div class="desc">Enforce line breaks after each array element</div></td>
@@ -2024,7 +2051,7 @@
         <td><a class="name" href="https://eslint.style/rules/jsx-props-style" target="_blank" rel="noopener">@stylistic/exp-jsx-props-style</a> <span class="source">@stylistic</span><div class="desc">Enforce consistent line break styles for JSX props</div></td>
     </tr>
     <tr>
-        <td><a class="name" href="https://eslint.style/rules/list-style" target="_blank" rel="noopener">@stylistic/exp-list-style</a> <span class="source">@stylistic</span><div class="desc">Enforce consistent spacing and line break styles inside brackets.</div></td>
+        <td><a class="name" href="https://eslint.style/rules/function-call-argument-newline" target="_blank" rel="noopener">@stylistic/function-call-argument-newline</a> <span class="source">@stylistic</span><div class="desc">Enforce line breaks between arguments of a function call</div></td>
     </tr>
     <tr>
         <td><a class="name" href="https://eslint.style/rules/function-paren-newline" target="_blank" rel="noopener">@stylistic/function-paren-newline</a> <span class="source">@stylistic</span><div class="desc">Enforce consistent line breaks inside function parentheses</div></td>
@@ -2066,9 +2093,6 @@
         <td><a class="name" href="https://eslint.style/rules/jsx-function-call-newline" target="_blank" rel="noopener">@stylistic/jsx-function-call-newline</a> <span class="source">@stylistic</span><div class="desc">Enforce line breaks before and after JSX elements when they are used as arguments to a function.</div></td>
     </tr>
     <tr>
-        <td><a class="name" href="https://eslint.style/rules/jsx-indent" target="_blank" rel="noopener">@stylistic/jsx-indent</a> <span class="source">@stylistic</span><div class="desc">Enforce JSX indentation. Deprecated, use `indent` rule instead.</div></td>
-    </tr>
-    <tr>
         <td><a class="name" href="https://eslint.style/rules/jsx-indent-props" target="_blank" rel="noopener">@stylistic/jsx-indent-props</a> <span class="source">@stylistic</span><div class="desc">Enforce props indentation in JSX</div></td>
     </tr>
     <tr>
@@ -2084,13 +2108,13 @@
         <td><a class="name" href="https://eslint.style/rules/jsx-pascal-case" target="_blank" rel="noopener">@stylistic/jsx-pascal-case</a> <span class="source">@stylistic</span><div class="desc">Enforce PascalCase for user-defined JSX components</div></td>
     </tr>
     <tr>
-        <td><a class="name" href="https://eslint.style/rules/jsx-props-no-multi-spaces" target="_blank" rel="noopener">@stylistic/jsx-props-no-multi-spaces</a> <span class="source">@stylistic</span><div class="desc">Disallow multiple spaces between inline JSX props. Deprecated, use `no-multi-spaces` rule instead.</div></td>
-    </tr>
-    <tr>
         <td><a class="name" href="https://eslint.style/rules/jsx-self-closing-comp" target="_blank" rel="noopener">@stylistic/jsx-self-closing-comp</a> <span class="source">@stylistic</span><div class="desc">Disallow extra closing tags for components without children</div></td>
     </tr>
     <tr>
-        <td><a class="name" href="https://eslint.style/rules/jsx-sort-props" target="_blank" rel="noopener">@stylistic/jsx-sort-props</a> <span class="source">@stylistic</span><div class="desc">Enforce props alphabetical sorting</div></td>
+        <td><a class="name" href="https://eslint.style/rules/jsx-shorthand-boolean" target="_blank" rel="noopener">@stylistic/jsx-shorthand-boolean</a> <span class="source">@stylistic</span><div class="desc">Enforce shorthand for boolean JSX attributes.</div></td>
+    </tr>
+    <tr>
+        <td><a class="name" href="https://eslint.style/rules/jsx-shorthand-fragment" target="_blank" rel="noopener">@stylistic/jsx-shorthand-fragment</a> <span class="source">@stylistic</span><div class="desc">Enforce shorthand fragment syntax.</div></td>
     </tr>
     <tr>
         <td><a class="name" href="https://eslint.style/rules/jsx-tag-spacing" target="_blank" rel="noopener">@stylistic/jsx-tag-spacing</a> <span class="source">@stylistic</span><div class="desc">Enforce whitespace in and around the JSX opening and closing brackets</div></td>
@@ -2133,6 +2157,9 @@
     </tr>
     <tr>
         <td><a class="name" href="https://eslint.style/rules/object-curly-newline" target="_blank" rel="noopener">@stylistic/object-curly-newline</a> <span class="source">@stylistic</span><div class="desc">Enforce consistent line breaks after opening and before closing braces</div></td>
+    </tr>
+    <tr>
+        <td><a class="name" href="https://eslint.style/rules/object-curly-spacing" target="_blank" rel="noopener">@stylistic/object-curly-spacing</a> <span class="source">@stylistic</span><div class="desc">Enforce consistent spacing inside braces</div></td>
     </tr>
     <tr>
         <td><a class="name" href="https://eslint.style/rules/object-property-newline" target="_blank" rel="noopener">@stylistic/object-property-newline</a> <span class="source">@stylistic</span><div class="desc">Enforce placing object properties on separate lines</div></td>
