@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "@eslint/compat": "2.1.1",
-    "@stylistic/eslint-plugin": "5.10.0",
+    "@stylistic/eslint-plugin": "6.0.1",
     "eslint-plugin-jest": "29.17.1",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-playwright": "2.12.2",
@@ -89,6 +89,7 @@
       "eslint": "$eslint"
     },
     "eslint-plugin-vue": {
+      "@stylistic/eslint-plugin": "$@stylistic/eslint-plugin",
       "eslint": "$eslint"
     }
   }

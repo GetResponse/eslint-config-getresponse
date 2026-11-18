@@ -12,7 +12,7 @@ An opinionated ESLint ruleset targeting TypeScript + React/Vue web apps.
 ## Requirements
 
 - ESLint `^9.0.0`
-- Node `>=18.18`
+- Node `^20.19.0 || ^22.13.0 || >=24`
 
 ## Installation
 
