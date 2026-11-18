@@ -89,6 +89,7 @@
       "eslint": "$eslint"
     },
     "eslint-plugin-vue": {
+      "@stylistic/eslint-plugin": "$@stylistic/eslint-plugin",
       "eslint": "$eslint"
     }
   }
