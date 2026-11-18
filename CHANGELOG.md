@@ -1,3 +1,26 @@
+# [11.0.0](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.2.4...v11.0.0) (2026-11-18)
+
+
+* feat(style)!: replace deprecated bracket rules with list-style ([cfddc57](https://github.com/GetResponse/eslint-config-getresponse/commit/cfddc57772d47ca92cb50616d9aed3c49c1102f8))
+* fix(deps)!: upgrade @stylistic/eslint-plugin to v6 ([ff1fe84](https://github.com/GetResponse/eslint-config-getresponse/commit/ff1fe842d6ee14cacbfcbafced058a70b7854f66))
+
+
+### Bug Fixes
+
+* **deps:** accept [@stylistic](https://github.com/stylistic) v6 as eslint-plugin-vue peer ([fcf49d8](https://github.com/GetResponse/eslint-config-getresponse/commit/fcf49d85323626df548d75899fbf3bf73db93aeb)), closes [vuejs/eslint-plugin-vue#3264](https://github.com/vuejs/eslint-plugin-vue/issues/3264)
+
+
+### BREAKING CHANGES
+
+* `@stylistic/list-style` is enabled and reports
+objects, arrays, imports, destructuring, parameters and type lists that
+mix both layouts. Run `eslint --fix`; the fix joins such lists into one
+line, so review any new `max-len` warnings and expand those lists
+manually.
+* Node.js ^20.19.0 || ^22.13.0 || >=24 is required.
+`@stylistic/indent` now reports property and type values placed on the
+next line without extra indentation; run `eslint --fix` to update.
+
 ## [10.2.4](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.2.3...v10.2.4) (2026-11-18)
 
 
