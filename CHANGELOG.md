@@ -1,3 +1,10 @@
+## [11.0.1](https://github.com/GetResponse/eslint-config-getresponse/compare/v11.0.0...v11.0.1) (2026-11-19)
+
+
+### Bug Fixes
+
+* **deps:** require dependency releases to be 3 days old ([0737599](https://github.com/GetResponse/eslint-config-getresponse/commit/0737599530dee7ab3fab4449b58047ae326cd5b4))
+
 # [11.0.0](https://github.com/GetResponse/eslint-config-getresponse/compare/v10.2.4...v11.0.0) (2026-11-18)
 
 
